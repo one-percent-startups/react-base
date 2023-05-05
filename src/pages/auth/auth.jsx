@@ -21,7 +21,8 @@ const Auth = () => {
         setError(null);
         // setmoldToken(res.data)
         Cookie.set("shaping3DKey", JSON.stringify(res.data));
-        console.log(res.data)
+        
+        console.log(res.data);
         navigate("/printers");
       })
       .catch((err) => {

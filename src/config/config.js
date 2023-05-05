@@ -14,16 +14,16 @@ app_api.interceptors.request.use((config) => {
   return config;
 });
 
-app_api.interceptors.response.use(
-  (response) => response,
-  (err) => {
-    if (
-      !err.request?.responseURL?.match("/") &&
-      err?.response?.status === 401
-    ) {
-      window.location = "/logout";
-    } else return Promise.reject(err);
-  }
-);
+// app_api.interceptors.response.use(
+//   (response) => response,
+//   (err) => {
+//     if (
+//       !err.request?.responseURL?.match("/") &&
+//       err?.response?.status === 401
+//     ) {
+//       window.location = "/logout";
+//     } else return Promise.reject(err);
+//   }
+// );
 
 export default app_api;

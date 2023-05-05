@@ -20,8 +20,9 @@ import {
   ClockIcon,
   CircleStackIcon,
   ArrowUpTrayIcon,
+  PlayCircleIcon,
 } from "@heroicons/react/24/outline";
-
+import { Formik, Form, Field, ErrorMessage } from "formik";
 import { Menu, Transition, Dialog } from "@headlessui/react";
 import React, { useState, useEffect, Fragment } from "react";
 import NavBar from "../components/navigation";
@@ -41,13 +42,21 @@ import {
 } from "recharts";
 import Chart from "line-chart-react";
 import "line-chart-react/dist/index.css";
+import app_api from "../config/config";
+import Cookies from "js-cookie";
+import { useParams } from "react-router-dom";
+import Printers from "./printers";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 const Dashboard = () => {
+  const [postId, setPostId] = useState("");
+  const [jobcontrol, setJobControl] = useState("print");
+  const { printerid } = useParams();
   const [uploadfiles, setUploadFiles] = useState(false);
+  const [file, setFile] = useState(null);
   function CustomAxis({ x, y, payload }) {
     return (
       <g
@@ -60,6 +69,60 @@ const Dashboard = () => {
       </g>
     );
   }
+
+  const pausePrintJob = (values) => {
+    app_api.post("job/print", values).then((res) => {});
+  };
+
+  const uploadFiles = () => {
+    let values_form_data = new FormData();
+    // Object.keys(values).forEach((key) => {
+    //   if (!!values[key]) values_form_data.append(key, values[key]);
+    // });
+    // values_form_data.append("file", currentTarget.files[0]);
+    app_api.post("files", values_form_data).then((res) => {
+      console.log(res.json);
+      console.log("uploaded");
+    });
+  };
+
+  const jobControls = () => {
+    {
+      jobcontrol === "print"
+        ? app_api.post("job/print", { printerId: printerid }).then((res) => {
+            setJobControl("stop");
+
+            console.log("Print");
+          })
+        : jobcontrol === "stop"
+        ? app_api
+            .post("job/stop-print", { printerId: printerid })
+            .then((res) => {
+              setJobControl("print");
+
+              console.log("Stop");
+            })
+        : null;
+    }
+  };
+  const handleFileChange = (event) => {
+    setFile(event.target.files[0]);
+  };
+  const handleFileUpload = (event) => {
+    event.preventDefault();
+    const formData = new FormData();
+    formData.append("file", file);
+    app_api
+      .post("file", formData)
+      .then((res) => {
+        alert("File uploaded");
+        setUploadFiles(false);
+      })
+      .catch((err) => {
+        alert(err);
+      });
+  };
+
   const data = [
     { label: " 0", "Expected Point": 23, "Obtain Point": 122 },
     { label: " 1", "Expected Point": 3, "Obtain Point": 73 },
@@ -117,8 +180,8 @@ const Dashboard = () => {
             </button>
             <button
               type="button"
-              style={{ backgroundColor: "#FFA200" }}
-              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300  rounded-lg text-sm px-5 py-2 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+              // style={{ backgroundColor: "#FFA200" }}
+              className="text-white bg-[#FFA200] hover:bg-blue-800 focus:ring-4 focus:ring-blue-300  rounded-lg text-sm px-5 py-2 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
             >
               Emergency stop
             </button>
@@ -1006,10 +1069,27 @@ const Dashboard = () => {
             <hr className="my-3"></hr>
             <button
               type="button"
+              onClick={jobControls}
               className="my-2 mx-auto w-full flex justify-center font-md items-center flex mr-3 py-2 px-5 mr-2  text-sm  text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
             >
-              <PauseIcon className="w-5" />
-              Pause Print
+              {jobcontrol === "print" ? (
+                <>
+                  <PlayCircleIcon className="w-5" />
+                  Print
+                </>
+              ) : jobcontrol === "stop" ? (
+                <>
+                  <PauseIcon className="w-5" />
+                  Stop Print
+                </>
+              ) : (
+                <>
+                  <>
+                    <PlayCircleIcon className="w-5" />
+                    Print
+                  </>
+                </>
+              )}
             </button>
           </div>
 
@@ -1264,7 +1344,7 @@ const Dashboard = () => {
                   leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                 >
                   <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-sm sm:p-6">
-                    <div>
+                    {/* <div>
                       <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-green-100">
                         <ArrowUpTrayIcon
                           className="h-6 w-6 "
@@ -1302,7 +1382,47 @@ const Dashboard = () => {
                       >
                         Upload
                       </button>
-                    </div>
+                    </div> */}
+                    {/* <Formik
+                      initialValues={{ fileName: undefined }}
+                      // onSubmit={uploadFiles}
+                      validate={(values) => {
+                        const errors = {};
+                        if (!values.file) {
+                          errors.file = "Please select a file";
+                        }
+                        return errors;
+                      }}
+                      // onSubmit={(values, { setSubmitting }) => {
+                      //   setTimeout(() => {
+                      //     alert(JSON.stringify(values, null, 2));
+                      //     setSubmitting(false);
+                      //   }, 400);
+                      // }}
+                    >
+                      {({ handleSubmit, isSubmitting, setFieldValue }) => (
+                        <Form onSubmit={uploadFiles}>
+                          <Field
+                            name="fileName"
+                            type="file"
+                            onChange={(event) => {
+                              setFieldValue(
+                                "file",
+                                event.currentTarget.files[0]
+                              );
+                            }}
+                          />
+                          <ErrorMessage name="file" component="div" />
+                          <button type="submit" disabled={isSubmitting}>
+                            {isSubmitting ? "Submitting..." : "Submit"}
+                          </button>
+                        </Form>
+                      )}
+                    </Formik> */}
+                    <form onSubmit={handleFileUpload}>
+                      <input type="file" onChange={handleFileChange} />
+                      <button type="submit">Upload</button>
+                    </form>
                   </Dialog.Panel>
                 </Transition.Child>
               </div>

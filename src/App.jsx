@@ -19,7 +19,7 @@ function App() {
       <Route element={<ProtectedRoutes />}>
         <Route path="printers" element={<Printers />} />
         <Route
-          path="printers/:printerid/dashboard"
+          path="printers/:printerid"
           element={<PrinterDashboard />}
         />
       </Route>

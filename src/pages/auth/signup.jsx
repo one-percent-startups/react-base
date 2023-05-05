@@ -19,7 +19,7 @@ const SignUp = () => {
       .then((res) => {
         setLoading(false);
         setError(null);
-        // setmoldToken(res.data)
+       
         Cookie.set("shaping3DKey", JSON.stringify(res.data));
         console.log(res.data);
         navigate("/printers");

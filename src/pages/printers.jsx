@@ -25,11 +25,14 @@ const Printers = () => {
     user = JSON.parse(Cookies.get("shaping3DKey"));
     console.log("User: " + user);
   }
+
   const onSubmit = (values) => {
     console.log(values);
   };
+
   const [printers, setPrinters] = useState([]);
   const [addprinter, setAddPrinter] = useState(false);
+
   useEffect(() => {
     app_api.get("printer").then((res) => {
       setPrinters(res.data);
@@ -38,15 +41,18 @@ const Printers = () => {
 
     console.log("Not Signed In");
   }, []);
+
   const registerPrinter = (values) => {
     app_api.post("printer/register", values).then((res) => {
       cosnole.log(res.data);
       console.log(res);
     });
   };
+
   const onSubmitt = (values) => {
     console.log(values);
   };
+
   return (
     <div className="flex flex-row">
       <div className="hidden xs:hidden lg:block md:block">
@@ -142,7 +148,7 @@ const Printers = () => {
                     </div>
                     <div className="-ml-px flex w-0 flex-1">
                       <a
-                        href={`/printers/${printer.id}/dashboard`}
+                        href={`/printers/${printer.id}`}
                         className="relative inline-flex w-0 flex-1 items-center justify-center gap-x-3 rounded-br-lg border border-transparent py-4 text-sm font-semibold text-gray-900 hover                                                                "
                       >
                         Dashboard
