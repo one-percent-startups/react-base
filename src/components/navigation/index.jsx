@@ -93,8 +93,7 @@ const NavBar = () => {
                 />
               </div>
             </form>
-          </div>
-          <ul className="space-y-2">
+            <ul className="space-y-2 mt-5">
             <li>
               <a
                 href="/printers"
@@ -150,7 +149,13 @@ const NavBar = () => {
                   Settings
                 </span>
               </a>
-              <div className="p-3 rounded-lg bg-[#344054] text-[#E4E7EC] mt-3">
+             
+            </li>
+           
+          </ul>
+          </div>
+          
+          <div className="p-3 rounded-lg bg-[#344054] text-[#E4E7EC] mt-3">
                 <p className="text-sm font-medium mt-3 mb-2">
                   Welcome to Shaping3D !
                 </p>
@@ -177,9 +182,6 @@ const NavBar = () => {
                   Logout
                 </span>
               </a>
-            </li>
-           
-          </ul>
         </div>
       </aside>
     </>

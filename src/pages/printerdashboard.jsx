@@ -137,7 +137,7 @@ const Dashboard = () => {
         <NavBar />
       </div>
 
-      <div className="p-4 pt-6 xs:ml-[0em] md:ml-[3.3em] w-full ">
+      <div className="p-4 pt-6 xs:ml-[0em] md:ml-[2em] w-full ">
         <div className="flex justify-center">
           <div className="w-6/12 text-start flex">
             <button className="mr-4 bg-transparent hover:bg-red-600 text-blue-700 font-semibold hover:text-white py-2 px-4 border  hover:border-transparent rounded">
