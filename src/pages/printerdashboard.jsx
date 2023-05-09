@@ -60,7 +60,7 @@ const Dashboard = () => {
     return (
       <g
         transform={`translate(${x},${y})`}
-        className="text-sm text-gray-500 dark:text-gray-400"
+        className="text-sm text-gray-500 "
       >
         <text x={0} y={0} dy={25} textAnchor="middle" fill="currentColor">
           {payload.value}
@@ -145,7 +145,7 @@ const Dashboard = () => {
             <form className="w-full">
               <label
                 htmlFor="default-search"
-                className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+                className="mb-2 text-sm font-medium text-gray-900 sr-only "
               >
                 Search
               </label>
@@ -154,13 +154,13 @@ const Dashboard = () => {
                 <input
                   type="search"
                   id="default-search"
-                  className="block w-full p-2 pl-3 text-sm text-gray-900 border rounded-lg bg-gray-50  dark:placeholder-gray-400 dark:text-white "
+                  className="block w-full p-2 pl-3 text-sm text-gray-900 border rounded-lg bg-gray-50   "
                   placeholder="Search Code"
                   required
                 />
                 <button
                   type="submit"
-                  className="flex text-gray-500 absolute right-0 bottom-[1px]  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  className="flex text-gray-500 absolute right-0 bottom-[1px]  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 "
                 >
                   <PaperAirplaneIcon className="w-5 text-black mr-1" />
                   Send
@@ -172,7 +172,7 @@ const Dashboard = () => {
             <button
               type="button"
               onClick={() => setUploadFiles(true)}
-              className="flex mr-3 py-2 px-5 mr-2  text-sm  text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+              className="flex mr-3 py-2 px-5 mr-2  text-sm  text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 "
             >
               <CloudArrowUpIcon className="w-5 mr-2" />
               Upload & Start
@@ -180,7 +180,7 @@ const Dashboard = () => {
             <button
               type="button"
               // style={{ backgroundColor: "#FFA200" }}
-              className="text-white bg-[#FFA200] hover:bg-blue-800 focus:ring-4 focus:ring-blue-300  rounded-lg text-sm px-5 py-2 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+              className="text-white bg-[#FFA200] hover:bg-blue-800 focus:ring-4 focus:ring-blue-300  rounded-lg text-sm px-5 py-2 mr-2  focus:outline-none "
             >
               Emergency stop
             </button>
@@ -224,7 +224,7 @@ const Dashboard = () => {
             <div className="flex justify-end p-3 bg-gray-200">
               <button
                 type="button"
-                className="flex mr-3 py-2 px-5 mr-2  text-sm  text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                className="flex mr-3 py-2 px-5 mr-2  text-sm  text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 "
               >
                 <ArrowPathIcon className="w-5 mr-2" />
                 Refresh
@@ -239,12 +239,12 @@ const Dashboard = () => {
                 Tools + Extra
               </h2>
               <div className="w-full overflow-x-auto ">
-                <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 ">
-                  <thead className="text-xs text-gray-700 uppercase dark:text-gray-400">
+                <table className="w-full text-sm text-left text-gray-500  ">
+                  <thead className="text-xs text-gray-700 uppercase ">
                     <tr>
                       <th
                         scope="col"
-                        className="px-6 py-3 bg-gray-50 dark:bg-gray-800"
+                        className="px-6 py-3 bg-gray-50 "
                       >
                         <li className="text-yellow-500 ">Tool</li>
                       </th>
@@ -253,7 +253,7 @@ const Dashboard = () => {
                       </th>
                       <th
                         scope="col"
-                        className="px-6 py-3 bg-gray-50 dark:bg-gray-800"
+                        className="px-6 py-3 bg-gray-50 "
                       >
                         <li className="text-green-500 ">Current</li>
                       </th>
@@ -267,23 +267,23 @@ const Dashboard = () => {
                   </thead>
 
                   <tbody>
-                    <tr className="border-b border-gray-200 dark:border-gray-700">
+                    <tr className="border-b border-gray-200 ">
                       <th
                         scope="row"
-                        className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800 text-center"
+                        className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50  text-center"
                       >
                         Tool 0 <br></br>
                         <span className="font-light">T0</span>
                       </th>
                       <td className="px-6 py-4 text-red-500">Heater 1</td>
-                      <td className="px-6 py-4 bg-gray-50 dark:bg-gray-800">
+                      <td className="px-6 py-4 bg-gray-50 ">
                         N/A
                       </td>
                       <td className="px-6 py-4">
                         <button
                           id="dropdownDefaultButton"
                           data-dropdown-toggle="dropdown"
-                          className="border  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                          className="border  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center "
                           type="button"
                         >
                           0
@@ -306,16 +306,16 @@ const Dashboard = () => {
 
                         <div
                           id="dropdown"
-                          className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                          className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 "
                         >
                           <ul
-                            className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                            className="py-2 text-sm text-gray-700 "
                             aria-labelledby="dropdownDefaultButton"
                           >
                             <li>
                               <a
                                 href="#"
-                                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                className="block px-4 py-2 hover:bg-gray-100 "
                               >
                                 0
                               </a>
@@ -323,7 +323,7 @@ const Dashboard = () => {
                             <li>
                               <a
                                 href="#"
-                                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                className="block px-4 py-2 hover:bg-gray-100 "
                               >
                                 1
                               </a>
@@ -331,7 +331,7 @@ const Dashboard = () => {
                             <li>
                               <a
                                 href="#"
-                                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                className="block px-4 py-2 hover:bg-gray-100 "
                               >
                                 2
                               </a>
@@ -343,7 +343,7 @@ const Dashboard = () => {
                         <button
                           id="dropdownDefaultButton"
                           data-dropdown-toggle="dropdown"
-                          className="border  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                          className="border  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center "
                           type="button"
                         >
                           0
@@ -366,16 +366,16 @@ const Dashboard = () => {
 
                         <div
                           id="dropdown"
-                          className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                          className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 "
                         >
                           <ul
-                            className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                            className="py-2 text-sm text-gray-700 "
                             aria-labelledby="dropdownDefaultButton"
                           >
                             <li>
                               <a
                                 href="#"
-                                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                className="block px-4 py-2 hover:bg-gray-100 "
                               >
                                 0
                               </a>
@@ -383,7 +383,7 @@ const Dashboard = () => {
                             <li>
                               <a
                                 href="#"
-                                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                className="block px-4 py-2 hover:bg-gray-100 "
                               >
                                 1
                               </a>
@@ -391,7 +391,7 @@ const Dashboard = () => {
                             <li>
                               <a
                                 href="#"
-                                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                className="block px-4 py-2 hover:bg-gray-100 "
                               >
                                 2
                               </a>
@@ -400,23 +400,23 @@ const Dashboard = () => {
                         </div>
                       </td>
                     </tr>
-                    <tr className="border-b border-gray-200 dark:border-gray-700">
+                    <tr className="border-b border-gray-200 ">
                       <th
                         scope="row"
-                        className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800 text-center"
+                        className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50  text-center"
                       >
                         Tool 0 <br></br>
                         <span className="font-light">T0</span>
                       </th>
                       <td className="px-6 py-4 text-green-500">Heater 2</td>
-                      <td className="px-6 py-4 bg-gray-50 dark:bg-gray-800">
+                      <td className="px-6 py-4 bg-gray-50 ">
                         N/A
                       </td>
                       <td className="px-6 py-4">
                         <button
                           id="dropdownDefaultButton"
                           data-dropdown-toggle="dropdown"
-                          className="border  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                          className="border  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center "
                           type="button"
                         >
                           0
@@ -439,16 +439,16 @@ const Dashboard = () => {
 
                         <div
                           id="dropdown"
-                          className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                          className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 "
                         >
                           <ul
-                            className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                            className="py-2 text-sm text-gray-700 "
                             aria-labelledby="dropdownDefaultButton"
                           >
                             <li>
                               <a
                                 href="#"
-                                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                className="block px-4 py-2 hover:bg-gray-100 "
                               >
                                 0
                               </a>
@@ -456,7 +456,7 @@ const Dashboard = () => {
                             <li>
                               <a
                                 href="#"
-                                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                className="block px-4 py-2 hover:bg-gray-100 "
                               >
                                 1
                               </a>
@@ -464,7 +464,7 @@ const Dashboard = () => {
                             <li>
                               <a
                                 href="#"
-                                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                className="block px-4 py-2 hover:bg-gray-100 "
                               >
                                 2
                               </a>
@@ -476,7 +476,7 @@ const Dashboard = () => {
                         <button
                           id="dropdownDefaultButton"
                           data-dropdown-toggle="dropdown"
-                          className="border  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                          className="border  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center "
                           type="button"
                         >
                           0
@@ -499,16 +499,16 @@ const Dashboard = () => {
 
                         <div
                           id="dropdown"
-                          className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                          className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 "
                         >
                           <ul
-                            className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                            className="py-2 text-sm text-gray-700 "
                             aria-labelledby="dropdownDefaultButton"
                           >
                             <li>
                               <a
                                 href="#"
-                                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                className="block px-4 py-2 hover:bg-gray-100 "
                               >
                                 0
                               </a>
@@ -516,7 +516,7 @@ const Dashboard = () => {
                             <li>
                               <a
                                 href="#"
-                                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                className="block px-4 py-2 hover:bg-gray-100 "
                               >
                                 1
                               </a>
@@ -524,7 +524,7 @@ const Dashboard = () => {
                             <li>
                               <a
                                 href="#"
-                                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                className="block px-4 py-2 hover:bg-gray-100 "
                               >
                                 2
                               </a>
@@ -533,22 +533,22 @@ const Dashboard = () => {
                         </div>
                       </td>
                     </tr>
-                    <tr className=" border-gray-200 dark:border-gray-700">
+                    <tr className=" border-gray-200 ">
                       <th
                         scope="row"
-                        className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800 text-center"
+                        className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50  text-center"
                       >
                         Bed
                       </th>
                       <td className="px-6 py-4 text-blue-500">Heater 0</td>
-                      <td className="px-6 py-4 bg-gray-50 dark:bg-gray-800">
+                      <td className="px-6 py-4 bg-gray-50">
                         N/A
                       </td>
                       <td className="px-6 py-4">
                         <button
                           id="dropdownDefaultButton"
                           data-dropdown-toggle="dropdown"
-                          className="border  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                          className="border  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center "
                           type="button"
                         >
                           0
@@ -571,16 +571,16 @@ const Dashboard = () => {
 
                         <div
                           id="dropdown"
-                          className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                          className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 "
                         >
                           <ul
-                            className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                            className="py-2 text-sm text-gray-700 "
                             aria-labelledby="dropdownDefaultButton"
                           >
                             <li>
                               <a
                                 href="#"
-                                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                className="block px-4 py-2 hover:bg-gray-100 "
                               >
                                 0
                               </a>
@@ -588,7 +588,7 @@ const Dashboard = () => {
                             <li>
                               <a
                                 href="#"
-                                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                className="block px-4 py-2 hover:bg-gray-100 "
                               >
                                 1
                               </a>
@@ -596,7 +596,7 @@ const Dashboard = () => {
                             <li>
                               <a
                                 href="#"
-                                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                className="block px-4 py-2 hover:bg-gray-100 "
                               >
                                 2
                               </a>
@@ -608,7 +608,7 @@ const Dashboard = () => {
                         <button
                           id="dropdownDefaultButton"
                           data-dropdown-toggle="dropdown"
-                          className="border  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                          className="border  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center "
                           type="button"
                         >
                           0
@@ -631,16 +631,16 @@ const Dashboard = () => {
 
                         <div
                           id="dropdown"
-                          className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                          className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 "
                         >
                           <ul
-                            className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                            className="py-2 text-sm text-gray-700 "
                             aria-labelledby="dropdownDefaultButton"
                           >
                             <li>
                               <a
                                 href="#"
-                                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                className="block px-4 py-2 hover:bg-gray-100 "
                               >
                                 0
                               </a>
@@ -648,7 +648,7 @@ const Dashboard = () => {
                             <li>
                               <a
                                 href="#"
-                                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                className="block px-4 py-2 hover:bg-gray-100 "
                               >
                                 1
                               </a>
@@ -656,7 +656,7 @@ const Dashboard = () => {
                             <li>
                               <a
                                 href="#"
-                                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                className="block px-4 py-2 hover:bg-gray-100 "
                               >
                                 2
                               </a>
@@ -761,7 +761,7 @@ const Dashboard = () => {
               <div className=" flex">
                 <button
                   type="button"
-                  className="flex mr-3 py-2 px-5 mr-2  text-sm  text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                  className="flex mr-3 py-2 px-5 mr-2  text-sm  text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 "
                 >
                   <CloudArrowUpIcon className="w-5 mr-2" />
                   Home all
@@ -827,7 +827,7 @@ const Dashboard = () => {
               <button
                 type="button"
                 style={{ backgroundColor: "#FFA200" }}
-                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300  rounded-lg text-sm px-5 py-2 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300  rounded-lg text-sm px-5 py-2 mr-2  focus:outline-none "
               >
                 Home X
               </button>
@@ -850,7 +850,7 @@ const Dashboard = () => {
               <button
                 type="button"
                 style={{ backgroundColor: "#FFA200" }}
-                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300  rounded-lg text-sm px-5 py-2 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300  rounded-lg text-sm px-5 py-2 mr-2  focus:outline-none "
               >
                 Home Y
               </button>
@@ -873,7 +873,7 @@ const Dashboard = () => {
               <button
                 type="button"
                 style={{ backgroundColor: "#FFA200" }}
-                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300  rounded-lg text-sm px-5 py-2 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300  rounded-lg text-sm px-5 py-2 mr-2  focus:outline-none "
               >
                 Home Z
               </button>
@@ -1004,14 +1004,14 @@ const Dashboard = () => {
               <div className="pl-auto flex mt-5 lg:mt-0">
                 <button
                   type="button"
-                  className="flex mr-3 py-3 px-3 mr-2  text-sm  text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                  className="flex mr-3 py-3 px-3 mr-2  text-sm  text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200      "
                 >
                   <ArrowSmallUpIcon className="w-5 mr-2" />
                   Retract
                 </button>
                 <button
                   type="button"
-                  className="flex  py-3 px-3  text-sm  text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                  className="flex  py-3 px-3  text-sm  text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 "
                 >
                   <ArrowSmallUpIcon className="w-5 mr-2" />
                   Extrude
@@ -1030,14 +1030,14 @@ const Dashboard = () => {
             <div className=" mt-3 ml-auto flex justify-between">
               <button
                 type="button"
-                className=" flex mr-3 py-2 px-3 mr-2  text-sm  text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                className=" flex mr-3 py-2 px-3 mr-2  text-sm  text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 "
               >
                 Fan
               </button>
               <div className="flex items-center border rounded-xl">
                 <button
                   type="button"
-                  className=" flex  py-2 px-3 rounded-tl-2xl rounded-bl-2xl text-sm  text-gray-900 focus:outline-none bg-white border-r rounded-tl border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                  className=" flex  py-2 px-3 rounded-tl-2xl rounded-bl-2xl text-sm  text-gray-900 focus:outline-none bg-white border-r rounded-tl border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 "
                 >
                   -
                 </button>
@@ -1048,7 +1048,7 @@ const Dashboard = () => {
                 />
                 <button
                   type="button"
-                  className=" flex  py-2 px-3   text-sm  text-gray-900 focus:outline-none bg-white  border-l rounded-br-2xl rounded-tr-2xl border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                  className=" flex  py-2 px-3   text-sm  text-gray-900 focus:outline-none bg-white  border-l rounded-br-2xl rounded-tr-2xl border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 "
                 >
                   +
                 </button>
@@ -1067,7 +1067,7 @@ const Dashboard = () => {
             <button
               type="button"
               onClick={jobControls}
-              className="my-2 mx-auto w-full flex justify-center font-md items-center flex mr-3 py-2 px-5 mr-2  text-sm  text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+              className="my-2 mx-auto w-full flex justify-center font-md items-center flex mr-3 py-2 px-5 mr-2  text-sm  text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 "
             >
               {jobcontrol === "print" ? (
                 <>
@@ -1101,14 +1101,14 @@ const Dashboard = () => {
             <div className="flex jutsify-between items-center">
               <button
                 type="button"
-                className="mx-auto w-5/12 flex justify-center font-md items-center mt-3 flex mr-3 py-2 px-5 mr-2  text-sm  text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                className="mx-auto w-5/12 flex justify-center font-md items-center mt-3 flex mr-3 py-2 px-5 mr-2  text-sm  text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 "
               >
                 <ArrowTrendingDownIcon className="w-5 " />
                 -0.05mm
               </button>
               <button
                 type="button"
-                className="mx-auto w-5/12 flex justify-center font-md items-center mt-3 flex mr-3 py-2 px-5 mr-2  text-sm  text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                className="mx-auto w-5/12 flex justify-center font-md items-center mt-3 flex mr-3 py-2 px-5 mr-2  text-sm  text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 "
               >
                 <ArrowTrendingUpIcon className="w-5" />
                 +0.05mm
@@ -1184,19 +1184,19 @@ const Dashboard = () => {
               <div className="flex items-center ">
                 <button
                   type="button"
-                  className=" flex  py-2 px-3 border rounded-lg text-sm  text-gray-900 focus:outline-none bg-white  border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                  className=" flex  py-2 px-3 border rounded-lg text-sm  text-gray-900 focus:outline-none bg-white  border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 "
                 >
                   -
                 </button>
-                <div className="w-full bg-gray-200 rounded-full h-2.5 mx-2 dark:bg-gray-700">
+                <div className="w-full bg-gray-200 rounded-full h-2.5 mx-2 ">
                   <div
-                    className=" h-2.5 rounded-full dark:bg-blue-500"
+                    className=" h-2.5 rounded-full "
                     style={{ width: "45%", backgroundColor: "#FFA200" }}
                   ></div>
                 </div>
                 <button
                   type="button"
-                  className=" flex  py-2 px-3  text-sm  text-gray-900 focus:outline-none bg-white  border rounded-lg border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                  className=" flex  py-2 px-3  text-sm  text-gray-900 focus:outline-none bg-white  border rounded-lg border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 "
                 >
                   +
                 </button>
@@ -1207,19 +1207,19 @@ const Dashboard = () => {
               <div className="flex items-center ">
                 <button
                   type="button"
-                  className=" flex  py-2 px-3 border rounded-lg text-sm  text-gray-900 focus:outline-none bg-white  border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                  className=" flex  py-2 px-3 border rounded-lg text-sm  text-gray-900 focus:outline-none bg-white  border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 "
                 >
                   -
                 </button>
-                <div className="w-full bg-gray-200 rounded-full h-2.5 mx-2 dark:bg-gray-700">
+                <div className="w-full bg-gray-200 rounded-full h-2.5 mx-2 ">
                   <div
-                    className=" h-2.5 rounded-full dark:bg-blue-500"
+                    className=" h-2.5 rounded-full "
                     style={{ width: "45%", backgroundColor: "#FFA200" }}
                   ></div>
                 </div>
                 <button
                   type="button"
-                  className=" flex  py-2 px-3  text-sm  text-gray-900 focus:outline-none bg-white  border rounded-lg border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                  className=" flex  py-2 px-3  text-sm  text-gray-900 focus:outline-none bg-white  border rounded-lg border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 "
                 >
                   +
                 </button>
@@ -1259,19 +1259,19 @@ const Dashboard = () => {
                 <div className="flex items-center ">
                   <button
                     type="button"
-                    className=" flex  py-2 px-3 border rounded-lg text-sm  text-gray-900 focus:outline-none bg-white  border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                    className=" flex  py-2 px-3 border rounded-lg text-sm  text-gray-900 focus:outline-none bg-white  border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 "
                   >
                     -
                   </button>
-                  <div className="w-full bg-gray-200 rounded-full h-2.5 mx-2 dark:bg-gray-700">
+                  <div className="w-full bg-gray-200 rounded-full h-2.5 mx-2 ">
                     <div
-                      className=" h-2.5 rounded-full dark:bg-blue-500"
+                      className=" h-2.5 rounded-full "
                       style={{ width: "45%", backgroundColor: "#FFA200" }}
                     ></div>
                   </div>
                   <button
                     type="button"
-                    className=" flex  py-2 px-3  text-sm  text-gray-900 focus:outline-none bg-white  border rounded-lg border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                    className=" flex  py-2 px-3  text-sm  text-gray-900 focus:outline-none bg-white  border rounded-lg border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 "
                   >
                     +
                   </button>
@@ -1294,19 +1294,19 @@ const Dashboard = () => {
             <div className="flex items-center ">
               <button
                 type="button"
-                className=" flex  py-2 px-3 border rounded-lg text-sm  text-gray-900 focus:outline-none bg-white  border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                className=" flex  py-2 px-3 border rounded-lg text-sm  text-gray-900 focus:outline-none bg-white  border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 "
               >
                 -
               </button>
-              <div className="w-full bg-gray-200 rounded-full h-2.5 mx-2 dark:bg-gray-700">
+              <div className="w-full bg-gray-200 rounded-full h-2.5 mx-2 ">
                 <div
-                  className=" h-2.5 rounded-full dark:bg-blue-500"
+                  className=" h-2.5 rounded-full "
                   style={{ width: "45%", backgroundColor: "#FFA200" }}
                 ></div>
               </div>
               <button
                 type="button"
-                className=" flex  py-2 px-3  text-sm  text-gray-900 focus:outline-none bg-white  border rounded-lg border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                className=" flex  py-2 px-3  text-sm  text-gray-900 focus:outline-none bg-white  border rounded-lg border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 "
               >
                 +
               </button>
@@ -1435,7 +1435,7 @@ const Dashboard = () => {
                       <input
                         type="file"
                         onChange={handleFileChange}
-                        className="relative mt-5 block w-full min-w-0 flex-auto rounded border border-solid border-neutral-300 bg-clip-padding px-3 py-[0.32rem] text-base font-normal text-neutral-700 transition duration-300 ease-in-out file:-mx-3 file:-my-[0.32rem] file:overflow-hidden file:rounded-none file:border-0 file:border-solid file:border-inherit file:bg-neutral-100 file:px-3 file:py-[0.32rem] file:text-neutral-700 file:transition file:duration-150 file:ease-in-out file:[border-inline-end-width:1px] file:[margin-inline-end:0.75rem] hover:file:bg-neutral-200 focus:border-primary focus:text-neutral-700 focus:shadow-te-primary focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:file:bg-neutral-700 dark:file:text-neutral-100 dark:focus:border-primary"
+                        className="relative mt-5 block w-full min-w-0 flex-auto rounded border border-solid border-neutral-300 bg-clip-padding px-3 py-[0.32rem] text-base font-normal text-neutral-700 transition duration-300 ease-in-out file:-mx-3 file:-my-[0.32rem] file:overflow-hidden file:rounded-none file:border-0 file:border-solid file:border-inherit file:bg-neutral-100 file:px-3 file:py-[0.32rem] file:text-neutral-700 file:transition file:duration-150 file:ease-in-out file:[border-inline-end-width:1px] file:[margin-inline-end:0.75rem] hover:file:bg-neutral-200 focus:border-primary focus:text-neutral-700 focus:shadow-te-primary focus:outline-none "
                       />
                       <button
                         type="submit"

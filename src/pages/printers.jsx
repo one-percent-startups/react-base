@@ -38,11 +38,10 @@ const Printers = () => {
       setPrinters(res.data);
       // console.log(res.data);
     });
-  },[addprinter]);
+  }, [addprinter]);
 
   const registerPrinter = (values) => {
     app_api.post("printer/register", values).then((res) => {
-  
       setAddPrinter(false);
     });
   };
@@ -63,7 +62,7 @@ const Printers = () => {
             <form className="w-full">
               <label
                 htmlFor="default-search"
-                className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+                className="mb-2 text-sm font-medium text-gray-900 sr-only "
               >
                 Search
               </label>
@@ -72,13 +71,13 @@ const Printers = () => {
                 <input
                   type="search"
                   id="default-search"
-                  className="block w-full p-2 pl-3 text-sm text-gray-900 border rounded-lg bg-gray-50  dark:placeholder-gray-400 dark:text-white "
+                  className="block w-full p-2 pl-3 text-sm text-gray-900 border rounded-lg bg-gray-50   "
                   placeholder="Search Printer"
                   required
                 />
                 <button
                   type="submit"
-                  className="flex text-gray-500 absolute right-0 bottom-[1px]  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  className="flex text-gray-500 absolute right-0 bottom-[1px]  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 "
                 >
                   <PaperAirplaneIcon className="w-5 text-black mr-1" />
                   Send
@@ -90,7 +89,7 @@ const Printers = () => {
             <button
               type="button"
               onClick={() => setAddPrinter(true)}
-              className="flex mr-3 py-2 px-5 mr-2  text-sm  text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+              className="flex mr-3 py-2 px-5 mr-2  text-sm  text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 "
             >
               <PlusCircleIcon className="w-5 mr-2" />
               Add Printer
