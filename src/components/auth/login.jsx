@@ -3,6 +3,8 @@ import { Formik } from "formik";
 import { loginSchema } from "../../schema";
 import logo from "../../assets/images/logo.png";
 // import loginBg from '../../assets/images/login_bg.png'
+// import "../../styles/custom.css"
+
 
 const Login = ({ loading, error, login }) => {
   return (
@@ -132,7 +134,7 @@ const Login = ({ loading, error, login }) => {
               </div>
             </div>
           </div>
-          <p className="fixed bottom-6 -ml-12 text-gray-400 text-sm">
+          <p className="fixed bottom-6 lg:-ml-12 text-gray-400 text-sm">
             &copy;Shaping3D 2023
           </p>
         </div>

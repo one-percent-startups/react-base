@@ -36,16 +36,14 @@ const Printers = () => {
   useEffect(() => {
     app_api.get("printer").then((res) => {
       setPrinters(res.data);
-      console.log(res.data);
+      // console.log(res.data);
     });
-
-    console.log("Not Signed In");
-  }, []);
+  },[addprinter]);
 
   const registerPrinter = (values) => {
     app_api.post("printer/register", values).then((res) => {
-      cosnole.log(res.data);
-      console.log(res);
+  
+      setAddPrinter(false);
     });
   };
 
@@ -206,7 +204,7 @@ const Printers = () => {
                     </div>
                     <Formik
                       initialValues={initialValues}
-                      onSubmit={onSubmitt}
+                      onSubmit={registerPrinter}
                       // validate={addPrinterform}
                     >
                       {({ isSubmitting }) => (

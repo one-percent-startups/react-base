@@ -28,7 +28,6 @@ import React, { useState, useEffect, Fragment } from "react";
 import NavBar from "../components/navigation";
 import avatar from "../assets/images/avatar4.jpeg";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
-
 import {
   LineChart,
   Line,
@@ -137,15 +136,15 @@ const Dashboard = () => {
         <NavBar />
       </div>
 
-      <div className="p-4 pt-6 xs:ml-[0em] md:ml-[2em] w-full ">
-        <div className="flex justify-center">
-          <div className="w-6/12 text-start flex">
+      <div className="p-4 pt-6 xs:ml-[0em]  w-full ">
+        <div className="md:flex justify-center">
+          <div className="md:w-6/12 text-start flex">
             <button className="mr-4 bg-transparent hover:bg-red-600 text-blue-700 font-semibold hover:text-white py-2 px-4 border  hover:border-transparent rounded">
               <PowerIcon className="w-5 h-5 text-black " />
             </button>
             <form className="w-full">
               <label
-                for="default-search"
+                htmlFor="default-search"
                 className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
               >
                 Search
@@ -169,7 +168,7 @@ const Dashboard = () => {
               </div>
             </form>
           </div>
-          <div className="w-6/12 text-end flex justify-end">
+          <div className="w-6/12 text-end flex md:justify-end mt-5 lg:mt-0">
             <button
               type="button"
               onClick={() => setUploadFiles(true)}
@@ -188,8 +187,8 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className="flex justify-between mt-10 ">
-          <div className="rounded-lg border  w-4/12 shadow-md">
+        <div className="lg:flex justify-between mt-10 ">
+          <div className="rounded-lg border lg:w-4/12 shadow-md">
             <div className="flex justify-between px-3 pb-0 pt-3 font-semibold">
               <p className="flex ">
                 <InformationCircleIcon className="w-5" /> Status
@@ -233,444 +232,446 @@ const Dashboard = () => {
             </div>
           </div>
 
-          <div className="w-[37%] rounded-lg border shadow-md">
-            <div className="relative overflow-x-auto  sm:rounded-lg">
+          <div className="lg:w-[37%] rounded-lg border shadow-md relative mt-10 lg:mt-0">
+            <div className="relative   sm:rounded-lg">
               <h2 className="flex p-3 font-semibold">
                 <WrenchIcon className="w-5 mr-2 " />
                 Tools + Extra
               </h2>
-              <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                <thead className="text-xs text-gray-700 uppercase dark:text-gray-400">
-                  <tr>
-                    <th
-                      scope="col"
-                      className="px-6 py-3 bg-gray-50 dark:bg-gray-800"
-                    >
-                      <li className="text-yellow-500 ">Tool</li>
-                    </th>
-                    <th scope="col" className="px-6 py-3">
-                      <li className="text-red-500 ">Heater</li>
-                    </th>
-                    <th
-                      scope="col"
-                      className="px-6 py-3 bg-gray-50 dark:bg-gray-800"
-                    >
-                      <li className="text-green-500 ">Current</li>
-                    </th>
-                    <th scope="col" className="px-6 py-3">
-                      <li className="text-blue-500">Active</li>
-                    </th>
-                    <th scope="col" className="px-6 py-3">
-                      <li className="text-yellow-700 ">Standby</li>
-                    </th>
-                  </tr>
-                </thead>
+              <div className="w-full overflow-x-auto ">
+                <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 ">
+                  <thead className="text-xs text-gray-700 uppercase dark:text-gray-400">
+                    <tr>
+                      <th
+                        scope="col"
+                        className="px-6 py-3 bg-gray-50 dark:bg-gray-800"
+                      >
+                        <li className="text-yellow-500 ">Tool</li>
+                      </th>
+                      <th scope="col" className="px-6 py-3">
+                        <li className="text-red-500 ">Heater</li>
+                      </th>
+                      <th
+                        scope="col"
+                        className="px-6 py-3 bg-gray-50 dark:bg-gray-800"
+                      >
+                        <li className="text-green-500 ">Current</li>
+                      </th>
+                      <th scope="col" className="px-6 py-3">
+                        <li className="text-blue-500">Active</li>
+                      </th>
+                      <th scope="col" className="px-6 py-3">
+                        <li className="text-yellow-700 ">Standby</li>
+                      </th>
+                    </tr>
+                  </thead>
 
-                <tbody>
-                  <tr className="border-b border-gray-200 dark:border-gray-700">
-                    <th
-                      scope="row"
-                      className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800 text-center"
-                    >
-                      Tool 0 <br></br>
-                      <span className="font-light">T0</span>
-                    </th>
-                    <td className="px-6 py-4 text-red-500">Heater 1</td>
-                    <td className="px-6 py-4 bg-gray-50 dark:bg-gray-800">
-                      N/A
-                    </td>
-                    <td className="px-6 py-4">
-                      <button
-                        id="dropdownDefaultButton"
-                        data-dropdown-toggle="dropdown"
-                        className="border  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                        type="button"
+                  <tbody>
+                    <tr className="border-b border-gray-200 dark:border-gray-700">
+                      <th
+                        scope="row"
+                        className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800 text-center"
                       >
-                        0
-                        <svg
-                          className="w-4 h-4 ml-2"
-                          aria-hidden="true"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        Tool 0 <br></br>
+                        <span className="font-light">T0</span>
+                      </th>
+                      <td className="px-6 py-4 text-red-500">Heater 1</td>
+                      <td className="px-6 py-4 bg-gray-50 dark:bg-gray-800">
+                        N/A
+                      </td>
+                      <td className="px-6 py-4">
+                        <button
+                          id="dropdownDefaultButton"
+                          data-dropdown-toggle="dropdown"
+                          className="border  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                          type="button"
                         >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M19 9l-7 7-7-7"
-                          ></path>
-                        </svg>
-                      </button>
+                          0
+                          <svg
+                            className="w-4 h-4 ml-2"
+                            aria-hidden="true"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                              d="M19 9l-7 7-7-7"
+                            ></path>
+                          </svg>
+                        </button>
 
-                      <div
-                        id="dropdown"
-                        className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
-                      >
-                        <ul
-                          className="py-2 text-sm text-gray-700 dark:text-gray-200"
-                          aria-labelledby="dropdownDefaultButton"
+                        <div
+                          id="dropdown"
+                          className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
                         >
-                          <li>
-                            <a
-                              href="#"
-                              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                            >
-                              0
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                            >
-                              1
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                            >
-                              2
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </td>
-                    <td className="px-6 py-4">
-                      <button
-                        id="dropdownDefaultButton"
-                        data-dropdown-toggle="dropdown"
-                        className="border  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                        type="button"
-                      >
-                        0
-                        <svg
-                          className="w-4 h-4 ml-2"
-                          aria-hidden="true"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
+                          <ul
+                            className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                            aria-labelledby="dropdownDefaultButton"
+                          >
+                            <li>
+                              <a
+                                href="#"
+                                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              >
+                                0
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              >
+                                1
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              >
+                                2
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                      <td className="px-6 py-4">
+                        <button
+                          id="dropdownDefaultButton"
+                          data-dropdown-toggle="dropdown"
+                          className="border  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                          type="button"
                         >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M19 9l-7 7-7-7"
-                          ></path>
-                        </svg>
-                      </button>
+                          0
+                          <svg
+                            className="w-4 h-4 ml-2"
+                            aria-hidden="true"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                              d="M19 9l-7 7-7-7"
+                            ></path>
+                          </svg>
+                        </button>
 
-                      <div
-                        id="dropdown"
-                        className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
-                      >
-                        <ul
-                          className="py-2 text-sm text-gray-700 dark:text-gray-200"
-                          aria-labelledby="dropdownDefaultButton"
+                        <div
+                          id="dropdown"
+                          className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
                         >
-                          <li>
-                            <a
-                              href="#"
-                              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                            >
-                              0
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                            >
-                              1
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                            >
-                              2
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr className="border-b border-gray-200 dark:border-gray-700">
-                    <th
-                      scope="row"
-                      className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800 text-center"
-                    >
-                      Tool 0 <br></br>
-                      <span className="font-light">T0</span>
-                    </th>
-                    <td className="px-6 py-4 text-green-500">Heater 2</td>
-                    <td className="px-6 py-4 bg-gray-50 dark:bg-gray-800">
-                      N/A
-                    </td>
-                    <td className="px-6 py-4">
-                      <button
-                        id="dropdownDefaultButton"
-                        data-dropdown-toggle="dropdown"
-                        className="border  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                        type="button"
+                          <ul
+                            className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                            aria-labelledby="dropdownDefaultButton"
+                          >
+                            <li>
+                              <a
+                                href="#"
+                                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              >
+                                0
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              >
+                                1
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              >
+                                2
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr className="border-b border-gray-200 dark:border-gray-700">
+                      <th
+                        scope="row"
+                        className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800 text-center"
                       >
-                        0
-                        <svg
-                          className="w-4 h-4 ml-2"
-                          aria-hidden="true"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        Tool 0 <br></br>
+                        <span className="font-light">T0</span>
+                      </th>
+                      <td className="px-6 py-4 text-green-500">Heater 2</td>
+                      <td className="px-6 py-4 bg-gray-50 dark:bg-gray-800">
+                        N/A
+                      </td>
+                      <td className="px-6 py-4">
+                        <button
+                          id="dropdownDefaultButton"
+                          data-dropdown-toggle="dropdown"
+                          className="border  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                          type="button"
                         >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M19 9l-7 7-7-7"
-                          ></path>
-                        </svg>
-                      </button>
+                          0
+                          <svg
+                            className="w-4 h-4 ml-2"
+                            aria-hidden="true"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                              d="M19 9l-7 7-7-7"
+                            ></path>
+                          </svg>
+                        </button>
 
-                      <div
-                        id="dropdown"
-                        className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
-                      >
-                        <ul
-                          className="py-2 text-sm text-gray-700 dark:text-gray-200"
-                          aria-labelledby="dropdownDefaultButton"
+                        <div
+                          id="dropdown"
+                          className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
                         >
-                          <li>
-                            <a
-                              href="#"
-                              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                            >
-                              0
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                            >
-                              1
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                            >
-                              2
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </td>
-                    <td className="px-6 py-4">
-                      <button
-                        id="dropdownDefaultButton"
-                        data-dropdown-toggle="dropdown"
-                        className="border  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                        type="button"
-                      >
-                        0
-                        <svg
-                          className="w-4 h-4 ml-2"
-                          aria-hidden="true"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
+                          <ul
+                            className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                            aria-labelledby="dropdownDefaultButton"
+                          >
+                            <li>
+                              <a
+                                href="#"
+                                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              >
+                                0
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              >
+                                1
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              >
+                                2
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                      <td className="px-6 py-4">
+                        <button
+                          id="dropdownDefaultButton"
+                          data-dropdown-toggle="dropdown"
+                          className="border  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                          type="button"
                         >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M19 9l-7 7-7-7"
-                          ></path>
-                        </svg>
-                      </button>
+                          0
+                          <svg
+                            className="w-4 h-4 ml-2"
+                            aria-hidden="true"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                              d="M19 9l-7 7-7-7"
+                            ></path>
+                          </svg>
+                        </button>
 
-                      <div
-                        id="dropdown"
-                        className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
-                      >
-                        <ul
-                          className="py-2 text-sm text-gray-700 dark:text-gray-200"
-                          aria-labelledby="dropdownDefaultButton"
+                        <div
+                          id="dropdown"
+                          className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
                         >
-                          <li>
-                            <a
-                              href="#"
-                              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                            >
-                              0
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                            >
-                              1
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                            >
-                              2
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr className=" border-gray-200 dark:border-gray-700">
-                    <th
-                      scope="row"
-                      className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800 text-center"
-                    >
-                      Bed
-                    </th>
-                    <td className="px-6 py-4 text-blue-500">Heater 0</td>
-                    <td className="px-6 py-4 bg-gray-50 dark:bg-gray-800">
-                      N/A
-                    </td>
-                    <td className="px-6 py-4">
-                      <button
-                        id="dropdownDefaultButton"
-                        data-dropdown-toggle="dropdown"
-                        className="border  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                        type="button"
+                          <ul
+                            className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                            aria-labelledby="dropdownDefaultButton"
+                          >
+                            <li>
+                              <a
+                                href="#"
+                                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              >
+                                0
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              >
+                                1
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              >
+                                2
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr className=" border-gray-200 dark:border-gray-700">
+                      <th
+                        scope="row"
+                        className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800 text-center"
                       >
-                        0
-                        <svg
-                          className="w-4 h-4 ml-2"
-                          aria-hidden="true"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        Bed
+                      </th>
+                      <td className="px-6 py-4 text-blue-500">Heater 0</td>
+                      <td className="px-6 py-4 bg-gray-50 dark:bg-gray-800">
+                        N/A
+                      </td>
+                      <td className="px-6 py-4">
+                        <button
+                          id="dropdownDefaultButton"
+                          data-dropdown-toggle="dropdown"
+                          className="border  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                          type="button"
                         >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M19 9l-7 7-7-7"
-                          ></path>
-                        </svg>
-                      </button>
+                          0
+                          <svg
+                            className="w-4 h-4 ml-2"
+                            aria-hidden="true"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                              d="M19 9l-7 7-7-7"
+                            ></path>
+                          </svg>
+                        </button>
 
-                      <div
-                        id="dropdown"
-                        className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
-                      >
-                        <ul
-                          className="py-2 text-sm text-gray-700 dark:text-gray-200"
-                          aria-labelledby="dropdownDefaultButton"
+                        <div
+                          id="dropdown"
+                          className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
                         >
-                          <li>
-                            <a
-                              href="#"
-                              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                            >
-                              0
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                            >
-                              1
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                            >
-                              2
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </td>
-                    <td className="px-6 py-4">
-                      <button
-                        id="dropdownDefaultButton"
-                        data-dropdown-toggle="dropdown"
-                        className="border  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                        type="button"
-                      >
-                        0
-                        <svg
-                          className="w-4 h-4 ml-2"
-                          aria-hidden="true"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
+                          <ul
+                            className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                            aria-labelledby="dropdownDefaultButton"
+                          >
+                            <li>
+                              <a
+                                href="#"
+                                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              >
+                                0
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              >
+                                1
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              >
+                                2
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                      <td className="px-6 py-4">
+                        <button
+                          id="dropdownDefaultButton"
+                          data-dropdown-toggle="dropdown"
+                          className="border  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                          type="button"
                         >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M19 9l-7 7-7-7"
-                          ></path>
-                        </svg>
-                      </button>
+                          0
+                          <svg
+                            className="w-4 h-4 ml-2"
+                            aria-hidden="true"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                              d="M19 9l-7 7-7-7"
+                            ></path>
+                          </svg>
+                        </button>
 
-                      <div
-                        id="dropdown"
-                        className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
-                      >
-                        <ul
-                          className="py-2 text-sm text-gray-700 dark:text-gray-200"
-                          aria-labelledby="dropdownDefaultButton"
+                        <div
+                          id="dropdown"
+                          className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
                         >
-                          <li>
-                            <a
-                              href="#"
-                              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                            >
-                              0
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                            >
-                              1
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                            >
-                              2
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                          <ul
+                            className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                            aria-labelledby="dropdownDefaultButton"
+                          >
+                            <li>
+                              <a
+                                href="#"
+                                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              >
+                                0
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              >
+                                1
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              >
+                                2
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
 
-          <div className="w-3/12 border rounded-lg pb-3 shadow-md">
+          <div className="lg:w-3/12 mt-10 lg:mt-0  border rounded-lg pb-3 shadow-md">
             <h2 className="flex p-3 font-semibold">
               <ArrowTrendingUpIcon className="w-5 mr-2 " />
               Temperature chart
@@ -678,89 +679,81 @@ const Dashboard = () => {
             <p className="text-gray-400 text-xs text-start pl-4 mb-5  font-light">
               Track your printer temperature chart.
             </p>
-            <LineChart
-              className="pl-5"
-              width={250}
-              height={250}
-              data={data}
-              margin={{ top: 5, right: 5, left: 0, bottom: 5 }}
-            >
-              <defs>
-                <linearGradient
-                  id="liquidity-gradient"
-                  x1="0"
-                  y1="0"
-                  x2="0"
-                  y2="1"
-                >
-                  <stop offset="5%" stopColor="#3A63E0" stopOpacity={0.3} />
-                  <stop offset="100%" stopColor="#3A63E0" stopOpacity={0} />
-                </linearGradient>
-              </defs>
-              <Line
-                type={"monotone"}
-                dataKey="Expected Point"
-                stroke="#3A63E0"
-                strokeWidth={4}
-                fill="url(#liquidity-gradient)"
-                activeDot={{
-                  stroke: "#fff",
-                  strokeWidth: 5,
-                  r: 10,
-                }}
-              />
-              <Line
-                type={"monotone"}
-                dataKey="Expected Point"
-                stroke="#3A63E0"
-                strokeWidth={4}
-                fill="url(#liquidity-gradient)"
-                activeDot={{
-                  stroke: "#fff",
-                  strokeWidth: 2,
-                  r: 21,
-                }}
-              />
-              <Line
-                type={"monotone"}
-                dataKey="Obtain Point"
-                stroke="green"
-                strokeWidth={4}
-                fill="url(#liquidity-gradient)"
-                activeDot={{
-                  stroke: "#fff",
-                  strokeWidth: 5,
-                  r: 10,
-                }}
-              />
-              <XAxis
-                dataKey="label"
-                tick={<CustomAxis />}
-                axisLine={false}
-                tickLine={false}
-              />
-              <Tooltip
-              //   content={<></>}
-              //   cursor={{
-              //     strokeWidth: 50,
-              //     stroke: 'rgb(237, 239, 243)',
-              //   }}
-              //   wrapperStyle={{
-              //     boxShadow: '0 0 1px 0px 4px 50px rgba(73, 93, 112, 0.08)',
-              //     background: 'red',
-              //   }}
-              />
-              <CartesianGrid
-                vertical={false}
-                strokeDasharray="10 5"
-                stroke={"#E5E7EB"}
-              />
-            </LineChart>
+            <div className="w-full overflow-x-auto">
+              <LineChart
+                className="px-5"
+                width={350}
+                height={250}
+                data={data}
+                margin={{ top: 5, right: 5, left: 0, bottom: 5 }}
+              >
+                <defs>
+                  <linearGradient
+                    id="liquidity-gradient"
+                    x1="0"
+                    y1="0"
+                    x2="0"
+                    y2="1"
+                  >
+                    <stop offset="5%" stopColor="#3A63E0" stopOpacity={0.3} />
+                    <stop offset="100%" stopColor="#3A63E0" stopOpacity={0} />
+                  </linearGradient>
+                </defs>
+                <Line
+                  type={"monotone"}
+                  dataKey="Expected Point"
+                  stroke="#3A63E0"
+                  strokeWidth={4}
+                  fill="url(#liquidity-gradient)"
+                  activeDot={{
+                    stroke: "#fff",
+                    strokeWidth: 5,
+                    r: 10,
+                  }}
+                />
+                <Line
+                  type={"monotone"}
+                  dataKey="Expected Point"
+                  stroke="#3A63E0"
+                  strokeWidth={4}
+                  fill="url(#liquidity-gradient)"
+                  activeDot={{
+                    stroke: "#fff",
+                    strokeWidth: 2,
+                    r: 21,
+                  }}
+                />
+                <Line
+                  type={"monotone"}
+                  dataKey="Obtain Point"
+                  stroke="green"
+                  strokeWidth={4}
+                  fill="url(#liquidity-gradient)"
+                  activeDot={{
+                    stroke: "#fff",
+                    strokeWidth: 5,
+                    r: 10,
+                  }}
+                />
+                <XAxis
+                  dataKey="label"
+                  tick={<CustomAxis />}
+                  axisLine={false}
+                  tickLine={false}
+                />
+                <Tooltip />
+                <CartesianGrid
+                  vertical={false}
+                  strokeDasharray="10 5"
+                  stroke={"#E5E7EB"}
+                />
+              </LineChart>
+            </div>
           </div>
         </div>
 
-        <div className="flex justify-between mt-10">
-          <div className=" w-8/12 border  rounded-lg shadow-md p-3">
+        <div className="lg:flex justify-between mt-10">
+          <div className=" lg:w-8/12 mt-10 lg:mt-0 border  rounded-lg shadow-md p-3">
             <div className="flex justify-between w-full items-center">
               <div className="w-6/12">
                 <h1 className="text-start font-semibold">Machine movement</h1>
@@ -887,7 +880,7 @@ const Dashboard = () => {
             </div>
           </div>
 
-          <div className="w-[30%] border rounded-lg pb-3 shadow-md">
+          <div className="lg:w-[30%] mt-10 lg:mt-0 border overflow-x-auto rounded-lg pb-3 shadow-md">
             <h2 className="flex p-3 font-semibold">
               <CircleStackIcon className="w-5 mr-2 " />
               Layer Chart
@@ -895,91 +888,93 @@ const Dashboard = () => {
             <p className="text-gray-400 text-xs text-start pl-4 mb-5  font-light">
               Track your printer temperature chart.
             </p>
-            <LineChart
-              className="pl-1"
-              width={350}
-              height={150}
-              data={data}
-              margin={{ top: 5, right: 5, left: 0, bottom: 5 }}
-            >
-              <defs>
-                <linearGradient
-                  id="liquidity-gradient"
-                  x1="0"
-                  y1="0"
-                  x2="0"
-                  y2="1"
-                >
-                  <stop offset="5%" stopColor="#3A63E0" stopOpacity={0.3} />
-                  <stop offset="100%" stopColor="#3A63E0" stopOpacity={0} />
-                </linearGradient>
-              </defs>
-              <Line
-                type={"monotone"}
-                dataKey="Expected Point"
-                stroke="#3A63E0"
-                strokeWidth={4}
-                fill="url(#liquidity-gradient)"
-                activeDot={{
-                  stroke: "#fff",
-                  strokeWidth: 5,
-                  r: 10,
-                }}
-              />
-              <Line
-                type={"monotone"}
-                dataKey="Expected Point"
-                stroke="blue"
-                strokeWidth={4}
-                fill="url(#liquidity-gradient)"
-                activeDot={{
-                  stroke: "#fff",
-                  strokeWidth: 2,
-                  r: 21,
-                }}
-              />
-              <Line
-                type={"monotone"}
-                dataKey="Obtain Point"
-                stroke="red"
-                strokeWidth={4}
-                fill="url(#liquidity-gradient)"
-                activeDot={{
-                  stroke: "#fff",
-                  strokeWidth: 5,
-                  r: 10,
-                }}
-              />
+            <div className="w-full overflow-x-auto">
+              <LineChart
+                className="pl-1 "
+                width={350}
+                height={150}
+                data={data}
+                margin={{ top: 5, right: 5, left: 0, bottom: 5 }}
+              >
+                <defs>
+                  <linearGradient
+                    id="liquidity-gradient"
+                    x1="0"
+                    y1="0"
+                    x2="0"
+                    y2="1"
+                  >
+                    <stop offset="5%" stopColor="#3A63E0" stopOpacity={0.3} />
+                    <stop offset="100%" stopColor="#3A63E0" stopOpacity={0} />
+                  </linearGradient>
+                </defs>
+                <Line
+                  type={"monotone"}
+                  dataKey="Expected Point"
+                  stroke="#3A63E0"
+                  strokeWidth={4}
+                  fill="url(#liquidity-gradient)"
+                  activeDot={{
+                    stroke: "#fff",
+                    strokeWidth: 5,
+                    r: 10,
+                  }}
+                />
+                <Line
+                  type={"monotone"}
+                  dataKey="Expected Point"
+                  stroke="blue"
+                  strokeWidth={4}
+                  fill="url(#liquidity-gradient)"
+                  activeDot={{
+                    stroke: "#fff",
+                    strokeWidth: 2,
+                    r: 21,
+                  }}
+                />
+                <Line
+                  type={"monotone"}
+                  dataKey="Obtain Point"
+                  stroke="red"
+                  strokeWidth={4}
+                  fill="url(#liquidity-gradient)"
+                  activeDot={{
+                    stroke: "#fff",
+                    strokeWidth: 5,
+                    r: 10,
+                  }}
+                />
 
-              <Tooltip
-              //   content={<></>}
-              //   cursor={{
-              //     strokeWidth: 50,
-              //     stroke: 'rgb(237, 239, 243)',
-              //   }}
-              //   wrapperStyle={{
-              //     boxShadow: '0 0 1px 0px 4px 50px rgba(73, 93, 112, 0.08)',
-              //     background: 'red',
-              //   }}
-              />
-              <CartesianGrid
-                vertical={false}
-                strokeDasharray="10 5"
-                stroke={"#E5E7EB"}
-              />
-              <YAxis />
-            </LineChart>
+                <Tooltip
+                //   content={<></>}
+                //   cursor={{
+                //     strokeWidth: 50,
+                //     stroke: 'rgb(237, 239, 243)',
+                //   }}
+                //   wrapperStyle={{
+                //     boxShadow: '0 0 1px 0px 4px 50px rgba(73, 93, 112, 0.08)',
+                //     background: 'red',
+                //   }}
+                />
+                <CartesianGrid
+                  vertical={false}
+                  strokeDasharray="10 5"
+                  stroke={"#E5E7EB"}
+                />
+                <YAxis />
+              </LineChart>
+            </div>
           </div>
         </div>
 
-        <div className="flex mt-10 justify-between items-start ">
-          <div className="border rounded-lg p-3 w-8/12 shadow-md">
+        <div className="lg:flex mt-10 justify-between items-start ">
+          <div className="border rounded-lg p-3 lg:w-8/12 mt-10 lg:mt-0 shadow-md">
             <h1 className="text-start font-semibold w-full">
               Extrusion Control
             </h1>
             <hr className="my-3"></hr>
-            <div className="flex w-12/12 justify-between items-end">
-              <div className="w-5/12 ">
+            <div className="lg:flex w-12/12 justify-between items-end">
+              <div className="lg:w-5/12 ">
                 <p className="font-light text-start text-sm mb-2">
                   Feed amount in mm
                 </p>
@@ -989,40 +984,42 @@ const Dashboard = () => {
                   <p className="border-r p-2">20</p>
                   <p className="border-r p-2">10</p>
                   <p className="border-r py-2 px-3">5</p>
-                  <p className=" py-2 px-3">1</p>
+                  <p className="border-r py-2 px-3">1</p>
                   <p className=""></p>
                 </div>
               </div>
-              <div className="w-5/12 pl-4">
+              <div className="lg:w-5/12 mt-5 lg:mt-0 lg:pl-4">
                 <p className="font-light text-start text-sm mb-2">
                   Feed rate in mm/s
                 </p>
-                <div className="flex border rounded-lg w-9/12 ">
+                <div className="flex border rounded-lg mr-2 ">
                   <p className="border-r p-2">50</p>
                   <p className="border-r p-2">10</p>
                   <p className="border-r p-2">5</p>
                   <p className="border-r py-2 px-3">2</p>
-                  <p className=" py-2 px-3">1</p>
+                  <p className="border-r py-2 px-3">1</p>
                   <p className=""></p>
                 </div>
               </div>
-              <button
-                type="button"
-                className="flex mr-3 py-3 px-3 mr-2  text-sm  text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-              >
-                <ArrowSmallUpIcon className="w-5 mr-2" />
-                Retract
-              </button>
-              <button
-                type="button"
-                className="flex mr-3 py-3 px-3 mr-2  text-sm  text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-              >
-                <ArrowSmallUpIcon className="w-5 mr-2" />
-                Extrude
-              </button>
+              <div className="pl-auto flex mt-5 lg:mt-0">
+                <button
+                  type="button"
+                  className="flex mr-3 py-3 px-3 mr-2  text-sm  text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                >
+                  <ArrowSmallUpIcon className="w-5 mr-2" />
+                  Retract
+                </button>
+                <button
+                  type="button"
+                  className="flex  py-3 px-3  text-sm  text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                >
+                  <ArrowSmallUpIcon className="w-5 mr-2" />
+                  Extrude
+                </button>
+              </div>
             </div>
           </div>
-          <div className="border rounded-lg p-3 w-3.5/12 shadow-md">
+          <div className="border mt-10 lg:mt-0 rounded-lg p-3 lg:w-4/12 shadow-md lg:ml-5">
             <h1 className="text-start font-semibold w-full flex">
               <CogIcon className="w-5" />
               Fan Control
@@ -1060,8 +1057,8 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className="flex mt-10 justify-between items-start">
-          <div className="border rounded-lg p-3 w-3/12 shadow-md">
+        <div className="lg:flex mt-10 justify-between items-start">
+          <div className="border rounded-lg p-3 lg:w-3/12 shadow-md">
             <h1 className="text-start font-semibold w-full flex">
               <PrinterIcon className="w-5" />
               Job Control
@@ -1093,7 +1090,7 @@ const Dashboard = () => {
             </button>
           </div>
 
-          <div className="border rounded-lg p-3 w-3/12 shadow-md">
+          <div className="border rounded-lg p-3 lg:w-3/12 mt-10 lg:mt-0 shadow-md">
             <h1 className="text-start font-semibold w-full flex">
               <RocketLaunchIcon className="w-5" />Z Babystepping
             </h1>
@@ -1119,7 +1116,7 @@ const Dashboard = () => {
             </div>
           </div>
 
-          <div className="border rounded-lg p-3 w-5/12 shadow-md">
+          <div className="border rounded-lg p-3 lg:w-5/12 mt-10 lg:mt-0 shadow-md">
             <h1 className="text-start font-semibold w-full flex">
               <InformationCircleIcon className="w-5" />
               Collected data
@@ -1146,8 +1143,8 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className="flex mt-10 justify-between items-start">
-          <div className="rounded-lg border  w-3/12 mr-5 shadow-md">
+        <div className="lg:flex mt-10 justify-between items-start">
+          <div className="rounded-lg border  lg:w-3/12 lg:mr-5 shadow-md">
             <div className="flex justify-between px-3 pb-0 pt-3 font-semibold">
               <p className="flex ">
                 <InformationCircleIcon className="w-5" /> Job information
@@ -1174,7 +1171,7 @@ const Dashboard = () => {
             </div>
           </div>
 
-          <div className="rounded-lg border  w-5/12 mr-5 shadow-md">
+          <div className="rounded-lg border mt-10 lg:mt-0  lg:w-5/12 lg:mr-5 shadow-md">
             <div className="flex justify-between px-3 pb-0 pt-3 font-semibold">
               <p className="flex ">
                 <WrenchIcon className="w-5" /> Extrusion factors
@@ -1230,8 +1227,8 @@ const Dashboard = () => {
             </div>
           </div>
 
-          <div className=" w-4/12">
-            <div className="border rounded-lg p-3">
+          <div className=" lg:w-4/12 mt-10 lg:mt-0 ">
+            <div className="border rounded-lg p-3 shadow-md">
               <h1 className="text-start font-semibold w-full flex">
                 <InformationCircleIcon className="w-5" />
                 Estimations based on
@@ -1249,7 +1246,7 @@ const Dashboard = () => {
               </div>
             </div>
 
-            <div className="rounded-lg border mt-3  w-12/12  shadow-md">
+            <div className="rounded-lg border mt-10 lg:mt-3  w-12/12  shadow-md">
               <div className="flex justify-between px-3 pb-0 pt-3 font-semibold">
                 <p className="flex ">
                   <ClockIcon className="w-5" /> Speed factors
@@ -1435,8 +1432,17 @@ const Dashboard = () => {
                         </Dialog.Title>
                       </div>
 
-                      <input type="file" onChange={handleFileChange} className="relative mt-5 block w-full min-w-0 flex-auto rounded border border-solid border-neutral-300 bg-clip-padding px-3 py-[0.32rem] text-base font-normal text-neutral-700 transition duration-300 ease-in-out file:-mx-3 file:-my-[0.32rem] file:overflow-hidden file:rounded-none file:border-0 file:border-solid file:border-inherit file:bg-neutral-100 file:px-3 file:py-[0.32rem] file:text-neutral-700 file:transition file:duration-150 file:ease-in-out file:[border-inline-end-width:1px] file:[margin-inline-end:0.75rem] hover:file:bg-neutral-200 focus:border-primary focus:text-neutral-700 focus:shadow-te-primary focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:file:bg-neutral-700 dark:file:text-neutral-100 dark:focus:border-primary" />
-                      <button type="submit" className="mt-5 inline-flex w-full justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Upload</button>
+                      <input
+                        type="file"
+                        onChange={handleFileChange}
+                        className="relative mt-5 block w-full min-w-0 flex-auto rounded border border-solid border-neutral-300 bg-clip-padding px-3 py-[0.32rem] text-base font-normal text-neutral-700 transition duration-300 ease-in-out file:-mx-3 file:-my-[0.32rem] file:overflow-hidden file:rounded-none file:border-0 file:border-solid file:border-inherit file:bg-neutral-100 file:px-3 file:py-[0.32rem] file:text-neutral-700 file:transition file:duration-150 file:ease-in-out file:[border-inline-end-width:1px] file:[margin-inline-end:0.75rem] hover:file:bg-neutral-200 focus:border-primary focus:text-neutral-700 focus:shadow-te-primary focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:file:bg-neutral-700 dark:file:text-neutral-100 dark:focus:border-primary"
+                      />
+                      <button
+                        type="submit"
+                        className="mt-5 inline-flex w-full justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                      >
+                        Upload
+                      </button>
                     </form>
                   </Dialog.Panel>
                 </Transition.Child>

@@ -24,6 +24,21 @@ const NavBar = () => {
   const onLogout = () => {
     navigate("/logout");
   };
+  const hideSideBar = () => {
+    const hideNav = document.getElementById("default-sidebar");
+    const shortNav = document.getElementById("short-sidebar");
+    const expandMain = document.getElementById("root");
+    if (hideNav.style.display === "block") {
+      hideNav.style.display = "none";
+      shortNav.style.display = "block";
+      // hideNav.style.width = "100px";
+      expandMain.style.paddingLeft = "80px";
+    } else {
+      hideNav.style.display = "block";
+      shortNav.style.display = "none";
+      expandMain.style.paddingLeft = "255px";
+    }
+  };
   return (
     <>
       <button
@@ -31,13 +46,14 @@ const NavBar = () => {
         data-drawer-toggle="default-sidebar"
         aria-controls="default-sidebar"
         type="button"
-        className="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-sky-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+        onClick={hideSideBar}
+        className="inline-flex items-center p-2 mt-5  border-r border-y text-sm text-gray-500  hover:outline focus:outline-none focus:ring-2 focus:ring-gray-200  bg-[#101828]"
       >
         <span className="sr-only">Open sidebar</span>
         <svg
           className="w-6 h-6"
           // ariaHidden="true"
-          fill="currentColor"
+          fill="#fff"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
           aria-hidden="true"
@@ -53,10 +69,10 @@ const NavBar = () => {
       <aside
         id="default-sidebar"
         style={{ backgroundColor: "#101828" }}
-        className="fixed top-0 left-0 pr-0 z-40 w-64 h-full overflow-y-auto transition-transform -translate-x-full sm:translate-x-0 border-r"
+        className="fixed top-0 left-0 pr-0 z-40 w-64 h-full overflow-y-auto transition-transform -translate-x-full sm:translate-x-0 "
         aria-label="Sidebar"
       >
-        <div className="flex flex-col justify-between space-y-1 px-2 pb-4 h-[90vh]">
+        <div className="flex flex-col justify-between space-y-1 px-3 pb-4 h-[90vh]">
           <div className="my-2">
             <img src={navlogo} className="w-100" />
 
@@ -94,94 +110,173 @@ const NavBar = () => {
               </div>
             </form>
             <ul className="space-y-2 mt-5">
-            <li>
-              <a
-                href="/printers"
-                className=" flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-[#344054] focus:bg-[#344054]"
-              >
-                <span className="flex  ml-3 text-md font-medium text-white ">
-                  <AdjustmentsVerticalIcon className="w-7 pr-2"/>
-                  Control
-                </span>
-              </a>
-              <a
-                href="/landing"
-                className="bg-[#344054] mt-1 flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-[#344054] focus:bg-[#344054]"
-              >
-                <span className="flex ml-3 text-md font-medium text-white ">
-                 <ChartBarIcon className="w-7 pr-2"/>
-                  Dashboard
-                </span>
-              </a>
-              <a
-                href="/landing"
-                className="mt-1 flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-[#344054] focus:bg-[#344054]"
-              >
-                <span className="flex ml-3 text-md font-medium text-white ">
-                  <CodeBracketIcon className="w-7 pr-2"/>
-                  Console
-                </span>
-              </a>
-              <a
-                href="/landing"
-                className="mt-1 flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-[#344054] focus:bg-[#344054]"
-              >
-                <span className=" flex ml-3 text-md font-medium text-white ">
-                  <PrinterIcon className="w-7 pr-2"/>
-                  Job
-                </span>
-              </a>
-              <a
-                href="/landing"
-                className="mt-1 flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-[#344054] focus:bg-[#344054]"
-              >
-                <span className="flex ml-3 text-md font-medium text-white ">
-                  <FolderIcon className="w-7 pr-2"/>
-                  Files
-                </span>
-              </a>
-              <a
-                href="/classes"
-                className="mt-1 flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-[#344054] focus:bg-[#344054]"
-              >
-                <span className="flex ml-3 text-md font-medium text-white ">
-                  <Cog6ToothIcon className="w-7 pr-2"/>
-                  Settings
-                </span>
-              </a>
-             
-            </li>
-           
-          </ul>
+              <li>
+                <a
+                  href="/printers"
+                  className=" flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-[#344054] focus:bg-[#344054]"
+                >
+                  <span className="flex  ml-3 text-md font-medium text-white ">
+                    <AdjustmentsVerticalIcon className="w-7 pr-2" />
+                    Control
+                  </span>
+                </a>
+                <a
+                  href="/landing"
+                  className="bg-[#344054] mt-1 flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-[#344054] focus:bg-[#344054]"
+                >
+                  <span className="flex ml-3 text-md font-medium text-white ">
+                    <ChartBarIcon className="w-7 pr-2" />
+                    Dashboard
+                  </span>
+                </a>
+                <a
+                  href="/landing"
+                  className="mt-1 flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-[#344054] focus:bg-[#344054]"
+                >
+                  <span className="flex ml-3 text-md font-medium text-white ">
+                    <CodeBracketIcon className="w-7 pr-2" />
+                    Console
+                  </span>
+                </a>
+                <a
+                  href="/landing"
+                  className="mt-1 flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-[#344054] focus:bg-[#344054]"
+                >
+                  <span className=" flex ml-3 text-md font-medium text-white ">
+                    <PrinterIcon className="w-7 pr-2" />
+                    Job
+                  </span>
+                </a>
+                <a
+                  href="/landing"
+                  className="mt-1 flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-[#344054] focus:bg-[#344054]"
+                >
+                  <span className="flex ml-3 text-md font-medium text-white ">
+                    <FolderIcon className="w-7 pr-2" />
+                    Files
+                  </span>
+                </a>
+                <a
+                  href="/classes"
+                  className="mt-1 flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-[#344054] focus:bg-[#344054]"
+                >
+                  <span className="flex ml-3 text-md font-medium text-white ">
+                    <Cog6ToothIcon className="w-7 pr-2" />
+                    Settings
+                  </span>
+                </a>
+              </li>
+            </ul>
           </div>
-          
+
           <div className="p-3 rounded-lg bg-[#344054] text-[#E4E7EC] mt-3">
-                <p className="text-sm font-medium mt-3 mb-2">
-                  Welcome to Shaping3D !
-                </p>
-                <p className="text-sm ">
-                  Lorem ipsum dolor sit amet, consectetur adip incididunt
-                </p>
-                <div className="py-4 my-2 rounded-lg bg-[#344054]">
+            <p className="text-sm font-medium mt-3 mb-2 text-start">
+              Welcome to Shaping3D !
+            </p>
+            <p className="text-sm text-start">
+              Lorem ipsum dolor sit amet, consectetur adip incididunt
+            </p>
+            <div className="py-4 my-2 rounded-lg bg-[#344054]">
                   <img
                     className=" mx-auto w-100"
                     src={logo2}
                     alt="Your Company"
                   />
                 </div>
-                <div className="flex font-medium">
-                  <span className="text-sm mr-3">© Eniak</span>
-                </div>
-              </div>
-              <a
-                href="/logout"
-                className="mt-1 bottom-4 w-[231px] absolute flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-[#344054] focus:bg-[#344054]"
-              >
-                <span className="flex ml-3 text-md font-medium text-white ">
-                  <ArrowLeftOnRectangleIcon className="w-8 pr-2" />
-                  Logout
-                </span>
-              </a>
+      <div className="flex font-medium mt-10">
+              <span className="text-sm mr-3">© Shaping3DFQAC</span>
+            </div>
+          </div>
+          <a
+            href="/logout"
+            className="mt-1 bottom-4 w-[231px] absolute flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-[#344054] focus:bg-[#344054]"
+          >
+            <span className="flex ml-3 text-md font-medium text-white ">
+              <ArrowLeftOnRectangleIcon className="w-8 pr-2" />
+              Logout
+            </span>
+          </a>
+        </div>
+      </aside>  
+
+      {/* Hidden NAV */}
+
+      <aside
+        id="short-sidebar"
+        style={{ backgroundColor: "#101828",display:"none" }}
+        className="fixed top-0 left-0 pr-0 z-40 w-20 h-full overflow-y-auto transition-transform -translate-x-full sm:translate-x-0 "
+        aria-label="Sidebar"
+
+      >
+        <div className="flex flex-col justify-between space-y-1 px-3 pb-4 h-[90vh]">
+          <div className="my-2">
+            <img src={navlogo} className="w-48" />
+
+            <ul className="space-y-2 mt-5">
+              <li>
+                <a
+                  href="/printers"
+                  className=" flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-[#344054] focus:bg-[#344054]"
+                >
+                  <span className="flex  ml-3 text-md font-medium text-white ">
+                    <AdjustmentsVerticalIcon className="w-7 pr-2" />
+                  </span>
+                </a>
+                <a
+                  href="/landing"
+                  className="bg-[#344054] mt-1 flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-[#344054] focus:bg-[#344054]"
+                >
+                  <span className="flex ml-3 text-md font-medium text-white ">
+                    <ChartBarIcon className="w-7 pr-2" />
+                  </span>
+                </a>
+                {/* <a
+                  href="/landing"
+                  className="mt-1 flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-[#344054] focus:bg-[#344054]"
+                >
+                  <span className="flex ml-3 text-md font-medium text-white ">
+                    <CodeBracketIcon className="w-7 pr-2" />
+                  
+                  </span>
+                </a>
+                <a
+                  href="/landing"
+                  className="mt-1 flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-[#344054] focus:bg-[#344054]"
+                >
+                  <span className=" flex ml-3 text-md font-medium text-white ">
+                    <PrinterIcon className="w-7 pr-2" />
+                  
+                  </span>
+                </a>
+                <a
+                  href="/landing"
+                  className="mt-1 flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-[#344054] focus:bg-[#344054]"
+                >
+                  <span className="flex ml-3 text-md font-medium text-white ">
+                    <FolderIcon className="w-7 pr-2" />
+                  
+                  </span>
+                </a>
+                <a
+                  href="/classes"
+                  className="mt-1 flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-[#344054] focus:bg-[#344054]"
+                >
+                  <span className="flex ml-3 text-md font-medium text-white ">
+                    <Cog6ToothIcon className="w-7 pr-2" />
+                    
+                  </span>
+                </a> */}
+                <a
+                  href="/logout"
+                  className="mt-1 bottom-4  absolute flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-[#344054] focus:bg-[#344054]"
+                >
+                  <span className="flex ml-3 text-md font-medium text-white ">
+                    <ArrowLeftOnRectangleIcon className="w-8 pr-2" />
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </aside>
     </>

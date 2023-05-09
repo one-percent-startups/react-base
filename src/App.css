@@ -38,3 +38,17 @@ li::marker{
 .read-the-docs {
   color: #888;
 }
+.recharts-wrapper{
+  width:100%!important;
+} 
+.recharts-surface{
+  padding-right:15px;
+}
+@media only screen and (max-width:768px){
+  #root {
+    width: 100%;
+    margin: 0 0 0 auto;
+    padding-left: 0px!important;
+    text-align: center;
+  }
+}

@@ -158,7 +158,7 @@ const Signup = ({ loading, error, signup }) => {
               </div>
             </div>
           </div>
-          <p className="fixed bottom-6 -ml-12 text-gray-400 text-sm">
+          <p className="fixed bottom-6 lg:-ml-12 text-gray-400 text-sm">
             &copy;Shaping3D 2023
           </p>
         </div>
