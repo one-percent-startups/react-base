@@ -15,9 +15,10 @@ import {
   FolderIcon,
   Cog6ToothIcon,
 } from "@heroicons/react/24/outline";
-import logo from "../../assets/images/logo.png";
+// import logo from "../../assets/images/logo.png";
 import logo2 from "../../assets/images/logo.png";
 import navlogo from "../../assets/images/logo.png";
+import { ArrowsRightLeftIcon } from "@heroicons/react/20/solid";
 
 const NavBar = () => {
   const navigate = useNavigate();
@@ -32,7 +33,7 @@ const NavBar = () => {
       hideNav.style.display = "none";
       shortNav.style.display = "block";
       // hideNav.style.width = "100px";
-      expandMain.style.paddingLeft = "80px";
+      expandMain.style.paddingLeft = "75px";
     } else {
       hideNav.style.display = "block";
       shortNav.style.display = "none";
@@ -47,10 +48,10 @@ const NavBar = () => {
         aria-controls="default-sidebar"
         type="button"
         onClick={hideSideBar}
-        className="inline-flex items-center p-2 mt-5  border-r border-y text-sm text-gray-500  hover:outline focus:outline-none focus:ring-2 focus:ring-gray-200  bg-[#101828]"
+        className="inline-flex items-center relative -ml-16 z-50 p-1 mt-7 border  text-sm text-gray-500  hover:outline focus:outline-none focus:ring-2 focus:ring-gray-200  bg-[#101828]"
       >
         <span className="sr-only">Open sidebar</span>
-        <svg
+        {/* <svg
           className="w-6 h-6"
           // ariaHidden="true"
           fill="#fff"
@@ -63,7 +64,8 @@ const NavBar = () => {
             fillRule="evenodd"
             d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
           ></path>
-        </svg>
+        </svg> */}
+        <ArrowsRightLeftIcon className="w-5 text-white" />
       </button>
 
       <aside
@@ -73,13 +75,13 @@ const NavBar = () => {
         aria-label="Sidebar"
       >
         <div className="flex flex-col justify-between space-y-1 px-3 pb-4 h-[90vh]">
-          <div className="my-2">
-            <img src={navlogo} className="w-100" />
+          <div className="mt-5">
+            <img src={navlogo} className="w-[70%] mb-10" />
 
             <form className="mt-3 ">
               <label
                 // htmlFor="default-search"
-                className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+                className="mb-2 text-sm font-medium text-gray-900 sr-only "
               >
                 Search
               </label>
@@ -87,7 +89,7 @@ const NavBar = () => {
                 <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                   <svg
                     aria-hidden="true"
-                    className="w-5 h-5 text-white dark:text-gray-400"
+                    className="w-5 h-5 text-white "
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -104,7 +106,7 @@ const NavBar = () => {
                 <input
                   type="search"
                   id="default-search"
-                  className="block w-full py-2 pl-10 text-sm text-white-900  rounded-lg bg-[#344054] focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 placeholder-white dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="block w-full py-2 pl-10 text-sm text-white-900  rounded-lg bg-[#344054] focus:ring-blue-500 focus:border-blue-500  placeholder-white "
                   placeholder="Search"
                 />
               </div>
@@ -129,7 +131,7 @@ const NavBar = () => {
                     Dashboard
                   </span>
                 </a>
-                <a
+                {/* <a
                   href="/landing"
                   className="mt-1 flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-[#344054] focus:bg-[#344054]"
                 >
@@ -164,7 +166,7 @@ const NavBar = () => {
                     <Cog6ToothIcon className="w-7 pr-2" />
                     Settings
                   </span>
-                </a>
+                </a> */}
               </li>
             </ul>
           </div>
@@ -176,15 +178,11 @@ const NavBar = () => {
             <p className="text-sm text-start">
               Lorem ipsum dolor sit amet, consectetur adip incididunt
             </p>
-            <div className="py-4 my-2 rounded-lg bg-[#344054]">
-                  <img
-                    className=" mx-auto w-100"
-                    src={logo2}
-                    alt="Your Company"
-                  />
-                </div>
-      <div className="flex font-medium mt-10">
-              <span className="text-sm mr-3">© Shaping3DFQAC</span>
+            {/* <div className="py-4 my-2 rounded-lg bg-[#344054]">
+              <img className=" mx-auto w-100" src={logo2} alt="Your Company" />
+            </div> */}
+            <div className="flex font-medium mt-12">
+              <span className="text-sm mr-3">© Shaping3D FZCO</span>
             </div>
           </div>
           <a
@@ -197,22 +195,21 @@ const NavBar = () => {
             </span>
           </a>
         </div>
-      </aside>  
+      </aside>
 
       {/* Hidden NAV */}
 
       <aside
         id="short-sidebar"
-        style={{ backgroundColor: "#101828",display:"none" }}
+        style={{ backgroundColor: "#101828", display: "none" }}
         className="fixed top-0 left-0 pr-0 z-40 w-20 h-full overflow-y-auto transition-transform -translate-x-full sm:translate-x-0 "
         aria-label="Sidebar"
-
       >
         <div className="flex flex-col justify-between space-y-1 px-3 pb-4 h-[90vh]">
           <div className="my-2">
-            <img src={navlogo} className="w-48" />
+            {/* <img src={navlogo} className="w-48" /> */}
 
-            <ul className="space-y-2 mt-5">
+            <ul className="space-y-2 mt-16">
               <li>
                 <a
                   href="/printers"
