@@ -42,32 +42,6 @@ const NavBar = () => {
   };
   return (
     <>
-      <button
-        data-drawer-target="default-sidebar"
-        data-drawer-toggle="default-sidebar"
-        aria-controls="default-sidebar"
-        type="button"
-        onClick={hideSideBar}
-        className="inline-flex items-center relative -ml-16 z-50 p-1 mt-7 border  text-sm text-gray-500  hover:outline focus:outline-none focus:ring-2 focus:ring-gray-200  bg-[#101828]"
-      >
-        <span className="sr-only">Open sidebar</span>
-        {/* <svg
-          className="w-6 h-6"
-          // ariaHidden="true"
-          fill="#fff"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-        >
-          <path
-            clipRule="evenodd"
-            fillRule="evenodd"
-            d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
-          ></path>
-        </svg> */}
-        <ArrowsRightLeftIcon className="w-5 text-white" />
-      </button>
-
       <aside
         id="default-sidebar"
         style={{ backgroundColor: "#101828" }}
@@ -76,8 +50,21 @@ const NavBar = () => {
       >
         <div className="flex flex-col justify-between space-y-1 px-3 pb-4 h-[90vh]">
           <div className="mt-5">
-            <img src={navlogo} className="w-[70%] mb-10" />
+            <div className=" mb-10 flex justify-between items-center ">
+              <img src={navlogo} className="w-[70%] " />
+              <button
+                data-drawer-target="default-sidebar"
+                data-drawer-toggle="default-sidebar"
+                aria-controls="default-sidebar"
+                type="button"
+                onClick={hideSideBar}
+                className="inline-flex items-center z-50 p-1  border  text-sm text-gray-500  hover:outline focus:outline-none focus:ring-2 focus:ring-gray-200  bg-[#101828]"
+              >
+                <span className="sr-only">Open sidebar</span>
 
+                <ArrowsRightLeftIcon className="w-5 text-white" />
+              </button>
+            </div>
             <form className="mt-3 ">
               <label
                 // htmlFor="default-search"
@@ -202,12 +189,25 @@ const NavBar = () => {
       <aside
         id="short-sidebar"
         style={{ backgroundColor: "#101828", display: "none" }}
-        className="fixed top-0 left-0 pr-0 z-40 w-20 h-full overflow-y-auto transition-transform -translate-x-full sm:translate-x-0 "
+        className="transition ease-in-out delay-150 fixed top-0 left-0 pr-0 z-40 w-20 h-full overflow-y-auto transition-transform -translate-x-full sm:translate-x-0 "
         aria-label="Sidebar"
       >
         <div className="flex flex-col justify-between space-y-1 px-3 pb-4 h-[90vh]">
           <div className="my-2">
-            {/* <img src={navlogo} className="w-48" /> */}
+            <div className="mt-4  flex justify-between items-center ">
+              <button
+                data-drawer-target="default-sidebar"
+                data-drawer-toggle="default-sidebar"
+                aria-controls="default-sidebar"
+                type="button"
+                onClick={hideSideBar}
+                className="inline-flex items-center z-50 p-1 mx-auto border  text-sm text-gray-500  hover:outline focus:outline-none focus:ring-2 focus:ring-gray-200  bg-[#101828]"
+              >
+                <span className="sr-only">Open sidebar</span>
+
+                <ArrowsRightLeftIcon className="w-5 text-white" />
+              </button>
+            </div>
 
             <ul className="space-y-2 mt-16">
               <li>
