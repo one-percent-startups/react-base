@@ -127,7 +127,7 @@ export const AppLanding = () => {
           <div className="lg:w-5/12 rounded-[55px] bg-[#1E1E2E] p-12 mt-5">
             <h1 className=" text-7xl text-primary_blue">*</h1>
             <p className="text-3xl text-white font-semibold">
-              At Dabbler we are focused on making home what it should be - a
+              At Do It All we are focused on making home what it should be - a
               place you truly enjoy coming home
             </p>
           </div>
@@ -308,7 +308,7 @@ export const AppLanding = () => {
           <div className="py-5 flex items-center justify-between text-white">
             <div>
               {" "}
-              <p>© 2023, Dabbler</p>
+              <p>© 2023, Do It All</p>
             </div>
             <div className="inline-flex">
               {" "}
