@@ -79,6 +79,9 @@ export const AppLanding = () => {
           and boost your income.
         </p>
         <button
+          onClick={() => {
+            setOpen(true);
+          }}
           type="button"
           className="rounded-[50px] bg-primary_blue px-8 py-3 mt-10 mx-3 text-lg font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
         >
@@ -252,6 +255,9 @@ export const AppLanding = () => {
                 customers
               </p>
               <button
+                onClick={() => {
+                  setOpen(true);
+                }}
                 type="button"
                 className="mt-8 text-xl rounded-[50px] bg-white px-5 py-4 text-sm font-semibold text-black shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
@@ -294,6 +300,9 @@ export const AppLanding = () => {
             </div>
             <div className="md::w-7/12 md:flex text-center justify-between items-start mb-5">
               <button
+                onClick={() => {
+                  setOpen(true);
+                }}
                 type="button"
                 className="ml-auto text-xl rounded-[50px] bg-white px-5 py-4 text-sm font-semibold text-black shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
