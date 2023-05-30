@@ -1,8 +1,8 @@
 import React from "react";
-import logo from "../../assets/images/logo Black.png";
+import logo from "../../assets/images/LogoBlack.png";
 export const AppNavbar = () => {
   return (
-    <div className="flex justify-center bg-[#DFE7FF]">
+    <div className="flex justify-center bg-[#DFE7FF] px-5 md:px-0">
     <div className="  max-w-[1280px] w-full flex items-center justify-between mx-auto h-[95px]">
       <div className="flex justify-between w-full p">
         <div>

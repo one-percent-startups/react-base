@@ -1,17 +1,17 @@
 import React from "react";
 import { NavBar } from "../components/navbar";
-import asset1 from "../assets/images/Group 12.png";
-import asset2 from "../assets/images/Group 19.png";
-import asset3 from "../assets/images/Group 20.png";
-import asset4 from "../assets/images/Group 21.png";
-import asset5 from "../assets/images/Group 22.png";
+import asset1 from "../assets/images/Group12.png";
+import asset2 from "../assets/images/Group19.png";
+import asset3 from "../assets/images/Group20.png";
+import asset4 from "../assets/images/Group21.png";
+import asset5 from "../assets/images/Group22.png";
 import { Footer } from "../components/footer";
-// import {CheckCircleIcon} from "@heroicons/24/outline";
-// import {EnvelopeIcon} from "@heroicons/24/outline";
+
 
 const LandingPage = () => {
   return (
     <div className="">
+    
       <NavBar />
       <div className="max-w-[1280px] mx-auto">
         <div className=" flex justify-between items-center">
@@ -178,6 +178,7 @@ const LandingPage = () => {
             </div>
           </div>
         </div>
+        
       </div>
       <Footer />
     </div>
