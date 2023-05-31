@@ -30,7 +30,6 @@ import { CheckIcon } from "@heroicons/react/20/solid";
 export const AppLanding = () => {
   const sectionsRef = useRef([]);
   const [open, setOpen] = useState(false);
-<<<<<<< HEAD
   
   const servicesOffered = [
     { label: 'Home Cleaning Service', value: 'Home Cleaning Service' },
@@ -60,11 +59,6 @@ export const AppLanding = () => {
     { label: 'Waltham Forest ', value: 'Waltham Forest ' },
     { label: 'Haringey ', value: 'Haringey ' }
   ]
-=======
-
-
-
->>>>>>> main
   return (
     <div className="bg-white scroll-smooth scroller">
       <div className="bg-[#DFE7FF]  Appsection ">
