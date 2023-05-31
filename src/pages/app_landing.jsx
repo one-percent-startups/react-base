@@ -8,7 +8,7 @@ import {
 import asset1 from "../assets/images/Group82.png";
 import asset2 from "../assets/images/double-right.png";
 import asset3 from "../assets/images/Group81.png";
-import asset4 from "../assets/images/Rectangle.png";
+import asset4 from "../assets/images/rectangle33.png";
 import asset5 from "../assets/images/asset5.png";
 import asset6 from "../assets/images/Group83.png";
 import asset7 from "../assets/images/Group84.png";
@@ -71,7 +71,7 @@ export const AppLanding = () => {
           <br className="md:block hidden"></br>
           All in one place under your control
         </h1>
-        <img src={asset4} className="w-3/12" />
+        <img src={asset4} className="md:w-4/12 xs:w-10/12" />
         <p className="md:text-xl text-base lg:w-4/12 text-[#9C9EB1] text-center">
           Our platform offers providers an intuitive, easy-to-use interface for
           scheduling services, tracking arrivals, and managing all your tasks
@@ -243,9 +243,9 @@ export const AppLanding = () => {
         </div>
       </div>
 
-      <div className="bg-dark_blue pt-20 md:block hidden">
+      <div className="bg-dark_blue  md:block hidden">
         <div className="bg-primary_blue pt-32">
-          <div className="max-w-[1280px] mx-auto flex justify-center items-center">
+          <div className="max-w-[1280px] mx-auto flex justify-between items-center">
             <div className="w-3/12">
               <h1 className="text-white text-7xl leading-[90px] ">
                 Join<br></br>us now
@@ -340,13 +340,13 @@ export const AppLanding = () => {
           <div className="py-5 md:flex items-center justify-between text-white">
             <div>
               {" "}
-              <p>© 2023, Do It All</p>
+              <p>© 2023, AA Technologies</p>
             </div>
-            <div className="inline-flex mt-2">
+            {/* <div className="inline-flex mt-2">
               {" "}
               <p className="mr-4">Terms & Conditions</p>
               <p>Privacy Policy</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
