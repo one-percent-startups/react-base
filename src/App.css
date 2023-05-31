@@ -42,3 +42,12 @@
 a{
   color:#fff!important;
 }
+.scroller {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.scroller .Appsection {
+  scroll-snap-align: start;
+}

@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from "react";
+import React, { useRef, useState, Fragment, useEffect } from "react";
 import { AppNavbar } from "../components/navbar/AppNav";
 import { Dialog, Transition } from "@headlessui/react";
 import Select from 'react-select';
@@ -9,7 +9,7 @@ import {
 import asset1 from "../assets/images/Group82.png";
 import asset2 from "../assets/images/double-right.png";
 import asset3 from "../assets/images/Group81.png";
-import asset4 from "../assets/images/Rectangle.png";
+import asset4 from "../assets/images/rectangle33.png";
 import asset5 from "../assets/images/asset5.png";
 import asset6 from "../assets/images/Group83.png";
 import asset7 from "../assets/images/Group84.png";
@@ -28,7 +28,9 @@ import {
 import { CheckIcon } from "@heroicons/react/20/solid";
 
 export const AppLanding = () => {
+  const sectionsRef = useRef([]);
   const [open, setOpen] = useState(false);
+<<<<<<< HEAD
   
   const servicesOffered = [
     { label: 'Home Cleaning Service', value: 'Home Cleaning Service' },
@@ -58,12 +60,20 @@ export const AppLanding = () => {
     { label: 'Waltham Forest ', value: 'Waltham Forest ' },
     { label: 'Haringey ', value: 'Haringey ' }
   ]
+=======
+
+
+
+>>>>>>> main
   return (
-    <div className="bg-white scroll-smooth">
-      <div className="bg-[#DFE7FF] ">
+    <div className="bg-white scroll-smooth scroller">
+      <div className="bg-[#DFE7FF]  Appsection ">
         <AppNavbar />
 
-        <div className="max-w-[1280px] mx-auto px-5 md:px-0">
+        <div
+          className="max-w-[1280px] mx-auto px-5 md:px-0"
+          ref={(ref) => (sectionsRef.current[0] = ref)}
+        >
           <div className="mt-20 text-center pb-20">
             <h4 className="text-primary_blue md:text-normal text-sm font-bold capitalize">
               LAUNCHING IN SEPTEMBER 2023
@@ -95,13 +105,16 @@ export const AppLanding = () => {
         </div>
       </div>
 
-      <div className="bg-dark_blue flex flex-col justify-center items-center py-32 px-5 md:px-0">
+      <div
+        className="bg-dark_blue flex flex-col justify-center items-center py-32 px-5 md:px-0 Appsection"
+        ref={(ref) => (sectionsRef.current[1] = ref)}
+      >
         <h1 className="md:text-6xl text-2xl text-center text-white">
           Optimize your <span className="text-primary_blue">Income</span>.
           <br className="md:block hidden"></br>
           All in one place under your control
         </h1>
-        <img src={asset4} className="w-3/12" />
+        <img src={asset4} className="md:w-4/12 xs:w-10/12" />
         <p className="md:text-xl text-base lg:w-4/12 text-[#9C9EB1] text-center">
           Our platform offers providers an intuitive, easy-to-use interface for
           scheduling services, tracking arrivals, and managing all your tasks
@@ -119,7 +132,11 @@ export const AppLanding = () => {
         </button>
       </div>
 
-      <div className="bg-white relative text-6xl max-w-[1280px] mx-auto md:flex justify-end z-1 px-5 md:px-0">
+      <div
+        className="bg-white relative text-6xl max-w-[1280px] mx-auto md:flex justify-end z-1 px-5 md:px-0 Appsection"
+        id="scrollAnimate"
+        ref={(ref) => (sectionsRef.current[2] = ref)}
+      >
         <div className="md:absolute md:left-0 md:w-6/12 md:translate-y-2/3">
           <div className="flex md:items-start items-end justify-center pt-10 md:flex-col flex-row ">
             <h1 className="mt-4 text-black lg:text-8xl md:text-7xl text-4xl font-semibold inline-flex items-end ">
@@ -195,7 +212,10 @@ export const AppLanding = () => {
         </div>
       </div>
 
-      <div className="bg-dark_blue pt-32 md:pb-56 pb-20 px-5 md:px-0 mt-16 md:mt-0">
+      <div
+        className="bg-dark_blue pt-32 md:pb-56 pb-20 px-5 md:px-0 mt-16 md:mt- Appsection"
+        ref={(ref) => (sectionsRef.current[3] = ref)}
+      >
         <div className="max-w-[1280px] mx-auto text-center">
           <h3 className="text-primary_blue">Get started</h3>
           <h1 className="md:text-7xl md:text-5xl text-4xl font-bold text-white mt-5">
@@ -273,9 +293,12 @@ export const AppLanding = () => {
         </div>
       </div>
 
-      <div className="bg-dark_blue pt-20 md:block hidden">
+      <div
+        className="bg-dark_blue  md:block hidden Appsection"
+        ref={(ref) => (sectionsRef.current[4] = ref)}
+      >
         <div className="bg-primary_blue pt-32">
-          <div className="max-w-[1280px] mx-auto flex justify-center items-center">
+          <div className="max-w-[1280px] mx-auto flex justify-between items-center">
             <div className="w-3/12">
               <h1 className="text-white text-7xl leading-[90px] ">
                 Join<br></br>us now
@@ -301,7 +324,10 @@ export const AppLanding = () => {
         </div>
       </div>
 
-      <div className="bg-dark_blue md:pt-20 px-5 md:px-0">
+      <div
+        className="bg-dark_blue md:pt-20 px-5 md:px-0 Appsection"
+        ref={(ref) => (sectionsRef.current[5] = ref)}
+      >
         <div className="max-w-[1280px] mx-auto ">
           <div className="md:flex justify-between items-start">
             <div className="md::w-4/12 mb-10 pt-10 md:pt-0">
@@ -370,13 +396,13 @@ export const AppLanding = () => {
           <div className="py-5 md:flex items-center justify-between text-white">
             <div>
               {" "}
-              <p>© 2023, Do It All</p>
+              <p>© 2023, AA Technologies</p>
             </div>
-            <div className="inline-flex mt-2">
+            {/* <div className="inline-flex mt-2">
               {" "}
               <p className="mr-4">Terms & Conditions</p>
               <p>Privacy Policy</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
