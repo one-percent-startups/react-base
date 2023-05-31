@@ -1,6 +1,7 @@
 import React, { useState, Fragment } from "react";
 import { AppNavbar } from "../components/navbar/AppNav";
 import { Dialog, Transition } from "@headlessui/react";
+import Select from 'react-select';
 import {
   ExclamationTriangleIcon,
   XMarkIcon,
@@ -28,6 +29,35 @@ import { CheckIcon } from "@heroicons/react/20/solid";
 
 export const AppLanding = () => {
   const [open, setOpen] = useState(false);
+  
+  const servicesOffered = [
+    { label: 'Home Cleaning Service', value: 'Home Cleaning Service' },
+    { label: 'Plumber', value: 'Plumber' },
+    { label: 'Electrician', value: 'Electrician' }
+  ];
+
+  const areasOfOperation= [
+    { label: 'City of London', value: 'City of London' },
+    { label: 'Westminster', value: 'Westminster' },
+    { label: 'Camden ', value: 'Camden ' },
+    { label: 'Kensington and Chelsea', value: 'Kensington and Chelsea' },
+    { label: 'Hammersmith and Fulham', value: 'Hammersmith and Fulham' },
+    { label: 'Islington', value: 'Islington' },
+    { label: 'Hackney ', value: 'Hackney ' },
+    { label: 'Tower Hamlets', value: 'Tower Hamlets' },
+    { label: 'Southwark', value: 'Southwark' },
+    { label: 'Lambeth', value: 'Lambeth' },
+    { label: 'Wandsworth ', value: 'Wandsworth ' },
+    { label: 'Lewisham ', value: 'Lewisham ' },
+    { label: 'Greenwich ', value: 'Greenwich ' },
+    { label: 'Bexley ', value: 'Bexley ' },
+    { label: 'Havering ', value: 'Havering ' },
+    { label: 'Barking and Dagenham ', value: 'Barking and Dagenham ' },
+    { label: 'Redbridge  ', value: 'Redbridge  ' },
+    { label: 'Newham  ', value: 'Newham  ' },
+    { label: 'Waltham Forest ', value: 'Waltham Forest ' },
+    { label: 'Haringey ', value: 'Haringey ' }
+  ]
   return (
     <div className="bg-white scroll-smooth">
       <div className="bg-[#DFE7FF] ">
@@ -439,14 +469,13 @@ export const AppLanding = () => {
                         >
                           Services offered
                         </label>
-                        <select
+                        <Select
                           id="countries"
+                          isSearchable
+                          placeholder=" Services offered"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 "
-                        >
-                          <option>Home Cleaning Service</option>
-                          <option>Plumber</option>
-                          <option>Electrician</option>
-                        </select>
+                          options={servicesOffered}
+                        />
                       </div>
 
                       <div className="mb-4">
@@ -469,14 +498,13 @@ export const AppLanding = () => {
                         >
                           Areas of operation
                         </label>
-                        <select
+                        <Select
                           id="countries"
+                          isSearchable
+                          options={areasOfOperation}
+                          placeholder="Areas Of Operation"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 "
-                        >
-                          <option>House Cleaning</option>
-                          <option>Plumber</option>
-                          <option>Electrician</option>
-                        </select>
+                        />
                       </div>
 
                       <label
