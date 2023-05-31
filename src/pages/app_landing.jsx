@@ -1,7 +1,7 @@
 import React, { useRef, useState, Fragment, useEffect } from "react";
 import { AppNavbar } from "../components/navbar/AppNav";
 import { Dialog, Transition } from "@headlessui/react";
-import Select from 'react-select';
+import Select from "react-select";
 import {
   ExclamationTriangleIcon,
   XMarkIcon,
@@ -30,39 +30,42 @@ import { CheckIcon } from "@heroicons/react/20/solid";
 export const AppLanding = () => {
   const sectionsRef = useRef([]);
   const [open, setOpen] = useState(false);
-  
+
   const servicesOffered = [
-    { label: 'Home Cleaning Service', value: 'Home Cleaning Service' },
-    { label: 'Plumber', value: 'Plumber' },
-    { label: 'Electrician', value: 'Electrician' }
+    { label: "Home Cleaning Service", value: "Home Cleaning Service" },
+    { label: "Plumber", value: "Plumber" },
+    { label: "Electrician", value: "Electrician" },
   ];
 
-  const areasOfOperation= [
-    { label: 'City of London', value: 'City of London' },
-    { label: 'Westminster', value: 'Westminster' },
-    { label: 'Camden ', value: 'Camden ' },
-    { label: 'Kensington and Chelsea', value: 'Kensington and Chelsea' },
-    { label: 'Hammersmith and Fulham', value: 'Hammersmith and Fulham' },
-    { label: 'Islington', value: 'Islington' },
-    { label: 'Hackney ', value: 'Hackney ' },
-    { label: 'Tower Hamlets', value: 'Tower Hamlets' },
-    { label: 'Southwark', value: 'Southwark' },
-    { label: 'Lambeth', value: 'Lambeth' },
-    { label: 'Wandsworth ', value: 'Wandsworth ' },
-    { label: 'Lewisham ', value: 'Lewisham ' },
-    { label: 'Greenwich ', value: 'Greenwich ' },
-    { label: 'Bexley ', value: 'Bexley ' },
-    { label: 'Havering ', value: 'Havering ' },
-    { label: 'Barking and Dagenham ', value: 'Barking and Dagenham ' },
-    { label: 'Redbridge  ', value: 'Redbridge  ' },
-    { label: 'Newham  ', value: 'Newham  ' },
-    { label: 'Waltham Forest ', value: 'Waltham Forest ' },
-    { label: 'Haringey ', value: 'Haringey ' }
-  ]
+  const areasOfOperation = [
+    { label: "City of London", value: "City of London" },
+    { label: "Westminster", value: "Westminster" },
+    { label: "Camden ", value: "Camden " },
+    { label: "Kensington and Chelsea", value: "Kensington and Chelsea" },
+    { label: "Hammersmith and Fulham", value: "Hammersmith and Fulham" },
+    { label: "Islington", value: "Islington" },
+    { label: "Hackney ", value: "Hackney " },
+    { label: "Tower Hamlets", value: "Tower Hamlets" },
+    { label: "Southwark", value: "Southwark" },
+    { label: "Lambeth", value: "Lambeth" },
+    { label: "Wandsworth ", value: "Wandsworth " },
+    { label: "Lewisham ", value: "Lewisham " },
+    { label: "Greenwich ", value: "Greenwich " },
+    { label: "Bexley ", value: "Bexley " },
+    { label: "Havering ", value: "Havering " },
+    { label: "Barking and Dagenham ", value: "Barking and Dagenham " },
+    { label: "Redbridge  ", value: "Redbridge  " },
+    { label: "Newham  ", value: "Newham  " },
+    { label: "Waltham Forest ", value: "Waltham Forest " },
+    { label: "Haringey ", value: "Haringey " },
+  ];
+  const Joinus = () => {
+    setOpen(true);
+  };
   return (
     <div className="bg-white scroll-smooth scroller">
       <div className="bg-[#DFE7FF]  Appsection ">
-        <AppNavbar />
+        <AppNavbar onClick={Joinus} />
 
         <div
           className="max-w-[1280px] mx-auto px-5 md:px-0"
@@ -82,9 +85,7 @@ export const AppLanding = () => {
                 Here
                 <img src={asset2} className="md:w-32 hidden md:block  mx-4" />
                 <button
-                  onClick={() => {
-                    setOpen(true);
-                  }}
+                  onClick={Joinus}
                   type="button"
                   className="rounded-[50px] bg-primary_blue  md:px-8 md:py-5 px-4 py-2 mx-1 md:text-lg text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
@@ -116,9 +117,7 @@ export const AppLanding = () => {
           and boost your income.
         </p>
         <button
-          onClick={() => {
-            setOpen(true);
-          }}
+          onClick={Joinus}
           type="button"
           className="rounded-[50px] bg-primary_blue px-8 py-3 mt-10 mx-3 text-lg font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
         >
@@ -302,11 +301,9 @@ export const AppLanding = () => {
                 customers
               </p>
               <button
-                onClick={() => {
-                  setOpen(true);
-                }}
+                onClick={Joinus}
                 type="button"
-                className="mt-8 text-xl rounded-[50px] bg-white px-5 py-4 text-sm font-semibold text-black shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="mt-8 text-xl rounded-[50px] bg-white px-5 py-4 text-sm font-semibold text-black hover:text-white shadow-sm hover:bg-dark_blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Join us now
               </button>
@@ -350,9 +347,7 @@ export const AppLanding = () => {
             </div>
             <div className="md::w-7/12 md:flex text-center justify-between items-start mb-5">
               <button
-                onClick={() => {
-                  setOpen(true);
-                }}
+                onClick={Joinus}
                 type="button"
                 className="ml-auto text-xl rounded-[50px] bg-white px-5 py-4 text-sm font-semibold text-black shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
@@ -442,6 +437,7 @@ export const AppLanding = () => {
                         <label
                           for="email"
                           class="block mb-2 text-sm font-medium text-[#344054] "
+                          required
                         >
                           First name
                         </label>
@@ -507,7 +503,8 @@ export const AppLanding = () => {
                         </label>
                         <textarea
                           id="address"
-                          className="bg-white max-h-[90px] overflow-y-auto border w-full"
+                          className="bg-white min-h-[70px] max-h-[100px] overflow-y-auto border w-full p-2"
+                          required
                         />
                       </div>
 
@@ -522,6 +519,7 @@ export const AppLanding = () => {
                           id="countries"
                           isSearchable
                           options={areasOfOperation}
+                          required
                           placeholder="Areas Of Operation"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 "
                         />
@@ -535,13 +533,16 @@ export const AppLanding = () => {
                       </label>
                       <div class="flex">
                         <span class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md ">
-                          $
+                          £
                         </span>
                         <input
-                          type="text"
-                          id="website-admin"
+                          type="number"
+                          id="cost"
+                          min="20"
+                          max="200"
                           class="rounded-none rounded-r-lg bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-2.5 "
-                          placeholder=""
+                          placeholder="Min 20"
+                          required
                         />
                       </div>
 
@@ -556,7 +557,7 @@ export const AppLanding = () => {
                           Cancel
                         </button>
                         <button
-                          type="button"
+                          type="submit"
                           className="md:w-5/12 rounded-3xl bg-indigo-600 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                         >
                           Submit
