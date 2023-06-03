@@ -77,12 +77,11 @@ export const AppLanding = () => {
             </h4>
             <div className="flex flex-col items-center">
               <h1 className="w-100 mt-4 text-black lg:text-8xl md:text-6xl xs:text-3xl text-2xl font-semibold inline-flex items-baseline ">
-                Easy Earning Starts
+                Easy Earning Starts Here
                 {/* <img src={asset1} className="w-32 h-14 mx-4" /> */}
               </h1>
               <h1 className="text-black lg:text-8xl md:text-6xl xs:text-3xl text-2xl md:mt-5 mt-2 font-semibold inline-flex items-center ">
                 {" "}
-                Here
                 <img src={asset2} className="md:w-32 hidden md:block  mx-4" />
                 <button
                   onClick={Joinus}
@@ -111,10 +110,10 @@ export const AppLanding = () => {
         </h1>
         <img src={asset4} className="md:w-4/12 xs:w-10/12" />
         <p className="md:text-xl text-base lg:w-4/12 text-[#9C9EB1] text-center">
-          Our platform offers providers an intuitive, easy-to-use interface for
-          scheduling services, tracking arrivals, and managing all your tasks
-          with ease. It's time to embrace convenience, optimize your operations,
-          and boost your income.
+          Welcome to seamless home management. Our intuitive, user-friendly app
+          is designed to simplify your life - schedule services, track arrivals,
+          and manage all your needs at the touch of a button. Embrace a new
+          standard of convenience, tailored to your lifestyle
         </p>
         <button
           onClick={Joinus}
@@ -211,9 +210,15 @@ export const AppLanding = () => {
       >
         <div className="max-w-[1280px] mx-auto text-center">
           <h3 className="text-primary_blue">Get started</h3>
-          <h1 className="md:text-7xl md:text-5xl text-4xl font-bold text-white mt-5">
-            Start earning in<br></br>{" "}
-            <span className="text-primary_blue"> 4 simple steps</span>
+          <h1
+            className="md:text-7xl md:text-5xl text-4xl font-bold text-white mt-5"
+            style={{ lineHeight: "1.2" }}
+          >
+            Building Trust
+            <span className="text-primary_blue ">
+              {" "}
+              Our Simple <br></br> 4-Step Identity Verification Process
+            </span>
           </h1>
 
           <div className="md:flex justify-between item-center mt-24 ">
