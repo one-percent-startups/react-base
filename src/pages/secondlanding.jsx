@@ -77,7 +77,7 @@ export const AppLanding = () => {
             </h4>
             <div className="flex flex-col items-center">
               <h1 className="w-100 mt-4 text-black lg:text-8xl md:text-6xl xs:text-3xl text-2xl font-semibold inline-flex items-baseline ">
-                Easy Earning Starts Here
+                Easy Living Starts Here
                 {/* <img src={asset1} className="w-32 h-14 mx-4" /> */}
               </h1>
               <h1 className="text-black lg:text-8xl md:text-6xl xs:text-3xl text-2xl md:mt-5 mt-2 font-semibold inline-flex items-center ">
@@ -88,7 +88,7 @@ export const AppLanding = () => {
                   type="button"
                   className="rounded-[50px] bg-primary_blue  md:px-8 md:py-5 px-4 py-2 mx-1 md:text-lg text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
-                  Join Us
+                  I'm Interested
                 </button>
               </h1>
             </div>
@@ -104,9 +104,11 @@ export const AppLanding = () => {
         ref={(ref) => (sectionsRef.current[1] = ref)}
       >
         <h1 className="md:text-6xl text-2xl text-center text-white">
-          Optimize your <span className="text-primary_blue">Income</span>.
+          Manage all your<br className="md:block hidden"></br> needs from our
+          app
+          {/* Optimize your <span className="text-primary_blue">Income</span>.
           <br className="md:block hidden"></br>
-          All in one place under your control
+          All in one place under your control */}
         </h1>
         <img src={asset4} className="md:w-4/12 xs:w-10/12" />
         <p className="md:text-xl text-base lg:w-4/12 text-[#9C9EB1] text-center">
@@ -120,7 +122,7 @@ export const AppLanding = () => {
           type="button"
           className="rounded-[50px] bg-primary_blue px-8 py-3 mt-10 mx-3 text-lg font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
         >
-          Join Us Now
+          I'm Interested
         </button>
       </div>
 
@@ -209,16 +211,29 @@ export const AppLanding = () => {
         ref={(ref) => (sectionsRef.current[3] = ref)}
       >
         <div className="max-w-[1280px] mx-auto text-center">
-          <h3 className="text-primary_blue">Get started</h3>
+          {/* <h3 className="md:text-7xl md:text-5xl text-4xl font-bold text-white mt-5"
+            style={{ lineHeight: "1.2" }}>Building Trust</h3> */}
+          {/* <h1
+            className="md:text-7xl md:text-5xl text-4xl font-bold text-white mt-5"
+            style={{ lineHeight: "1.2" }}
+          >
+            <span className="text-primary_blue ">
+              {" "}
+              Our Simple <br></br>  Identity Verification Process
+            </span>
+          </h1> */}
+
+
+          <h3 className="md:text-2xl md:text-5xl text-4xl font-bold mt-5 text-primary_blue">Building Trust</h3>
           <h1
             className="md:text-7xl md:text-5xl text-4xl font-bold text-white mt-5"
             style={{ lineHeight: "1.2" }}
           >
-            Building Trust
-            <span className="text-primary_blue ">
-              {" "}
-              Our Simple <br></br> 4-Step Identity Verification Process
-            </span>
+            
+            {/* <span className="text-white "> */}
+              {/* {" "} */}
+              Our Simple  <span className="text-primary_blue">4-Step</span><br></br> Identity Verification Process
+            {/* </span> */}
           </h1>
 
           <div className="md:flex justify-between item-center mt-24 ">
@@ -310,7 +325,7 @@ export const AppLanding = () => {
                 type="button"
                 className="mt-8 text-xl rounded-[50px] bg-white px-5 py-4 text-sm font-semibold text-black hover:text-white shadow-sm hover:bg-dark_blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
-                Join us now
+                I'm Interested
               </button>
             </div>
             <div className="w-8/12 ">
@@ -356,7 +371,7 @@ export const AppLanding = () => {
                 type="button"
                 className="ml-auto text-xl rounded-[50px] bg-white px-5 py-4 text-sm font-semibold text-black shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
-                Join us now
+                I'm Interested
               </button>
               {/* <div className="w-3/12">
                 <p className="font-semibold text-white">Company</p>
@@ -431,7 +446,7 @@ export const AppLanding = () => {
                 <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6">
                   <div className="p-2">
                     <h2 className="text-primary_blue text-2xl font-semibold">
-                      Join Us
+                    I'm InterestedJoin Us
                     </h2>
                     <p className="text-[#666666] text-sm">
                       Please fill in this form to apply at Do It All.
