@@ -75,12 +75,15 @@ const Dashboard = () => {
       })
       .catch((err) => {});
     getPrinterDetails();
-    setDetailInterval();
-    // setInterval(() => {
-    //   getPrinterDetails();
-    // }, 5000)
+    // setDetailInterval(
+    //   setInterval(() => {
+    //     getPrinterDetails();
+    //   }, 5000)
+    // );
+    viewPrinter();
     return () => {
       clearInterval(detailInterval);
+      quitViewPrinter();
     };
   }, []);
 
@@ -279,8 +282,29 @@ const Dashboard = () => {
       .catch((err) => {});
   };
 
+  const viewPrinter = () => {
+    app_api
+      .post("job/view-printer", { printerToken: printerid })
+      .then((res) => {})
+      .catch((err) => {});
+  };
+
+  const quitViewPrinter = () => {
+    app_api
+      .post("job/quit-view-printer", { printerToken: printerid })
+      .then((res) => {})
+      .catch((err) => {});
+  };
+
   const onSendCommand = (command) => {
-    console.log("sending command via send button", command);
+    app_api
+      .post("job", {
+        printerToken: printerid,
+        ownerId: printer?.ownerId,
+        command,
+      })
+      .then((res) => {})
+      .catch((err) => {});
   };
 
   function CustomAxis({ x, y, payload }) {
