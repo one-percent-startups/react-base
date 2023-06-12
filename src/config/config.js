@@ -5,6 +5,10 @@ export const app_api = axios.create({
   baseURL: import.meta.env.VITE_BACKEND_URL,
 });
 
+export const details_api = axios.create({
+  baseURL: import.meta.env.VITE_DETAILS_URL,
+})
+
 app_api.interceptors.request.use((config) => {
   if (!!Cookie.get("shaping3DKey")) {
     let shaping3DKey = JSON.parse(Cookie.get("shaping3DKey"));
