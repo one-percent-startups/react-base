@@ -401,6 +401,7 @@ const Dashboard = () => {
               Upload
             </button>
             <button
+              id="start_print"
               type="button"
               className="flex mr-3 py-2 px-5 mr-2  text-sm  text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 "
             >
@@ -882,7 +883,7 @@ const Dashboard = () => {
                 </>
               ) : jobcontrol === "stop" ? (
                 <>
-                  <PauseIcon className="w-5" />
+                  <PauseIcon className="w-5" id="pause_print" />
                   Stop Print
                 </>
               ) : (
@@ -907,6 +908,7 @@ const Dashboard = () => {
             <div className="flex jutsify-between items-center">
               <button
                 type="button"
+                id="minus_z_babystepping"
                 className="mx-auto w-5/12 flex justify-center font-md items-center mt-3 flex mr-3 py-2 px-5 mr-2  text-sm  text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 "
               >
                 <ArrowTrendingDownIcon className="w-5 " />
@@ -914,6 +916,7 @@ const Dashboard = () => {
               </button>
               <button
                 type="button"
+                id="plus_z_babystepping"
                 className="mx-auto w-5/12 flex justify-center font-md items-center mt-3 flex mr-3 py-2 px-5 mr-2  text-sm  text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 "
               >
                 <ArrowTrendingUpIcon className="w-5" />
